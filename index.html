@@ -168,6 +168,7 @@
             border-radius: 0 3px 3px 0;
             user-select: none;
             background-color: rgba(0,0,0,0.5);
+            z-index: 10; /* لضمان ظهور الأسهم فوق الصور */
         }
         
         .next {
@@ -412,7 +413,7 @@
             font-weight: bold;
             color: #25D366;
             margin: 20px 0;
-            direction: ltr;
+            direction: ltr; /* للحفاظ على تنسيق الرقم بالإنجليزية */
         }
 
         .copy-btn {
@@ -443,69 +444,56 @@
     </header>
     
     <div class="container">
-        <!-- Video Section -->
         <div class="video-section">
             <h2 style="text-align: center; color: var(--primary);">فيديو تعريفي عن المعهد</h2>
             <p style="text-align: center; margin-bottom: 20px; color: #666;">شاهد هذا الفيديو للتعرف أكثر على برامجنا التدريبية</p>
             
             <div class="video-container">
-                <!-- Replace with your actual video embed code -->
                 <iframe src="https://streamable.com/rpul8w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
-        <!-- Slideshow Section -->
         <div class="slideshow-section">
             <h2 style="text-align: center; color: var(--primary);">معرض الصور</h2>
             <p style="text-align: center; margin-bottom: 20px; color: #666;">جولة مصورة داخل مرافق المعهد وورش العمل</p>
             
             <div class="slideshow-container">
-                <!-- شريحة 1 -->
                 <div class="slide active">
                     <img src="my-images/photo1.jpg" alt="صورة 1 للمعهد">
                 </div>
                 
-                <!-- شريحة 2 -->
                 <div class="slide">
                     <img src="my-images/photo2.jpg" alt="صورة 2 للمعهد">
                 </div>
                 
-                <!-- شريحة 3 -->
                 <div class="slide">
                     <img src="my-images/photo3.jpg" alt="صورة 3 للمعهد">
                 </div>
                 
-                <!-- شريحة 4 -->
                 <div class="slide">
                     <img src="my-images/photo4.jpg" alt="صورة 4 للمعهد">
                 </div>
                 
-                <!-- شريحة 5 -->
                 <div class="slide">
                     <img src="my-images/photo5.jpg" alt="صورة 5 للمعهد">
                 </div>
                 
-                <!-- شريحة 6 -->
                 <div class="slide">
                     <img src="my-images/photo6.jpg" alt="صورة 6 للمعهد">
                 </div>
                 
-                <!-- شريحة 7 -->
                 <div class="slide">
                     <img src="my-images/photo7.jpg" alt="صورة 7 للمعهد">
                 </div>
                 
-                <!-- شريحة 8 -->
                 <div class="slide">
                     <img src="my-images/photo8.jpg" alt="صورة 8 للمعهد">
                 </div>
                 
-                <!-- شريحة 9 -->
                 <div class="slide">
                     <img src="my-images/photo9.jpg" alt="صورة 9 للمعهد">
                 </div>
                 
-                <!-- شريحة 10 -->
                 <div class="slide">
                     <img src="my-images/photo10.jpg" alt="صورة 10 للمعهد">
                 </div>
@@ -515,7 +503,8 @@
             </div>
             
             <div class="dots-container">
-                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <span class="dot" onclick="currentSlide(4)"></span>
@@ -524,7 +513,6 @@
                 <span class="dot" onclick="currentSlide(7)"></span>
                 <span class="dot" onclick="currentSlide(8)"></span>
                 <span class="dot" onclick="currentSlide(9)"></span>
-                <span class="dot" onclick="currentSlide(10)"></span>
             </div>
         </div>
 
@@ -532,7 +520,6 @@
         <p style="text-align: center; margin-bottom: 30px; color: #666;">برامج تدريبية متخصصة لمدة سنتين ونصف معتمدة بسعر مميز</p>
         
         <div class="diplomas-container">
-            <!-- Diploma 1 -->
             <div class="diploma-card">
                 <div class="diploma-header">
                     <h3>دبلوم إدارة المستشفيات والخدمات الصحية</h3>
@@ -560,7 +547,6 @@
                 </div>
             </div>
             
-            <!-- Diploma 2 -->
             <div class="diploma-card">
                 <div class="diploma-header">
                     <h3>دبلوم إدارة الخدمات اللوجستية</h3>
@@ -588,7 +574,6 @@
                 </div>
             </div>
             
-            <!-- Diploma 3 -->
             <div class="diploma-card">
                 <div class="diploma-header">
                     <h3>دبلوم علوم الحاسب الآلي التطبيقي</h3>
@@ -616,7 +601,6 @@
                 </div>
             </div>
             
-            <!-- Diploma 4 -->
             <div class="diploma-card">
                 <div class="diploma-header">
                     <h3>دبلوم إدارة الموارد البشرية</h3>
@@ -644,7 +628,6 @@
                 </div>
             </div>
             
-            <!-- Diploma 5 -->
             <div class="diploma-card">
                 <div class="diploma-header">
                     <h3>دبلوم الإدارة المكتبية</h3>
@@ -672,7 +655,6 @@
                 </div>
             </div>
             
-            <!-- Diploma 6 -->
             <div class="diploma-card">
                 <div class="diploma-header">
                     <h3>دبلوم الأمن السيبراني</h3>
@@ -726,7 +708,6 @@
         </div>
     </div>
 
-    <!-- Contact Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -764,36 +745,47 @@
     <script>
         // Slideshow functionality
         let slideIndex = 0;
-        showSlides();
-        
+        showSlides(slideIndex); // ابدأ من الشريحة الأولى (فهرس 0)
+
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
-        
+
+        // هذه الدالة تستقبل الفهرس مباشرة (0 لـ الصورة الأولى، 1 لـ الثانية، وهكذا)
         function currentSlide(n) {
-            showSlides(slideIndex = n - 1);
+            showSlides(slideIndex = n);
         }
-        
+
         function showSlides(n) {
             let i;
             let slides = document.getElementsByClassName("slide");
             let dots = document.getElementsByClassName("dot");
-            
-            if (n >= slides.length) {slideIndex = 0}
-            if (n < 0) {slideIndex = slides.length - 1}
-            
+
+            if (slides.length === 0) { // تأكد من وجود شرائح قبل المتابعة
+                console.warn("لا توجد شرائح في معرض الصور.");
+                return;
+            }
+
+            // ضبط slideIndex إذا تجاوز الحدود
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+
+            // إخفاء جميع الشرائح وإزالة التفعيل من جميع النقاط
             for (i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active");
             }
-            
             for (i = 0; i < dots.length; i++) {
                 dots[i].classList.remove("active");
             }
-            
+
+            // تفعيل الشريحة والنقطة الحالية
             slides[slideIndex].classList.add("active");
-            dots[slideIndex].classList.add("active");
+            // تأكد من أن الفهرس صالح للنقاط أيضاً
+            if (slideIndex < dots.length) {
+                dots[slideIndex].classList.add("active");
+            }
         }
-        
+
         // Auto slide change every 5 seconds
         setInterval(() => {
             plusSlides(1);
