@@ -472,7 +472,21 @@
                 <div class="slide">
                     <img src="my-images/photo5.jpg" alt="1حفل تخريج الطلاب">
                 </div>
-                
+                <div class="slide">
+                    <img src="my-images/photo6.jpg" alt="1حفل تخريج الطلاب">
+                </div>
+                <div class="slide">
+                    <img src="my-images/photo7.jpg" alt="1حفل تخريج الطلاب">
+                </div>
+                <div class="slide active">
+                    <img src="my-images/photo8.jpg" alt="1قاعة تدريب المعهد">
+                </div>
+                <div class="slide">
+                    <img src="my-images/photo9.jpg" alt="1ورشة عمل الطلاب">
+                </div>
+                <div class="slide">
+                    <img src="my-images/photo10.jpg" alt="1معمل الحاسب الآلي">
+                </div>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
