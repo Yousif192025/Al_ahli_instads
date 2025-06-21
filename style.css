@@ -42,6 +42,20 @@
             overflow: hidden;
         }
         
+        .header-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .header-logos img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+        
         header::before {
             content: "الفصل الدراسي الجديد صفر/1447";
             position: absolute;
@@ -57,7 +71,7 @@
         }
         
         header h1 {
-            margin: 0;
+            margin: 10px 0 0;
             font-size: 2.5rem;
             font-weight: 900;
         }
@@ -168,7 +182,7 @@
             border-radius: 0 3px 3px 0;
             user-select: none;
             background-color: rgba(0,0,0,0.5);
-            z-index: 10; /* لضمان ظهور الأسهم فوق الصور */
+            z-index: 10;
         }
         
         .next {
@@ -327,6 +341,19 @@
             border-radius: 20px 20px 0 0;
         }
         
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .footer-logos img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+        
         .contact-info {
             font-size: 1.5rem;
             font-weight: bold;
@@ -360,6 +387,15 @@
             
             .video-container {
                 padding-bottom: 56.25%;
+            }
+            
+            .header-logos, .footer-logos {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .header-logos img, .footer-logos img {
+                height: 60px;
             }
         }
 
@@ -413,7 +449,7 @@
             font-weight: bold;
             color: #25D366;
             margin: 20px 0;
-            direction: ltr; /* للحفاظ على تنسيق الرقم بالإنجليزية */
+            direction: ltr;
         }
 
         .copy-btn {
@@ -437,6 +473,10 @@
 <body>
     <header>
         <div class="container">
+            <div class="header-logos">
+                <img src="my-images/log1.png" alt="شعار المعهد الأهلي العالي للتدريب">
+                <img src="my-images/logo.png" alt="شعار المؤسسة العامة للتدريب التقني والمهني">
+            </div>
             <h1>المعهد الأهلي العالي للتدريب</h1>
             <p>نحو مستقبل مهني مشرق ببرامج تدريبية معتمدة</p>
             <div class="offer-badge">شهادات معتمدة من المؤسسة العامة للتدريب التقني والمهني</div>
@@ -727,6 +767,10 @@
     
     <footer>
         <div class="container">
+            <div class="footer-logos">
+                <img src="my-images/log1.png" alt="شعار المعهد الأهلي العالي للتدريب">
+                <img src="my-images/logo.png" alt="شعار المؤسسة العامة للتدريب التقني والمهني">
+            </div>
             <h3>المعهد الأهلي العالي للتدريب</h3>
             <p>محافظة القريات - المملكة العربية السعودية</p>
             
@@ -745,13 +789,12 @@
     <script>
         // Slideshow functionality
         let slideIndex = 0;
-        showSlides(slideIndex); // ابدأ من الشريحة الأولى (فهرس 0)
+        showSlides(slideIndex);
 
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
 
-        // هذه الدالة تستقبل الفهرس مباشرة (0 لـ الصورة الأولى، 1 لـ الثانية، وهكذا)
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
@@ -761,16 +804,14 @@
             let slides = document.getElementsByClassName("slide");
             let dots = document.getElementsByClassName("dot");
 
-            if (slides.length === 0) { // تأكد من وجود شرائح قبل المتابعة
+            if (slides.length === 0) {
                 console.warn("لا توجد شرائح في معرض الصور.");
                 return;
             }
 
-            // ضبط slideIndex إذا تجاوز الحدود
             if (n >= slides.length) { slideIndex = 0 }
             if (n < 0) { slideIndex = slides.length - 1 }
 
-            // إخفاء جميع الشرائح وإزالة التفعيل من جميع النقاط
             for (i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active");
             }
@@ -778,9 +819,7 @@
                 dots[i].classList.remove("active");
             }
 
-            // تفعيل الشريحة والنقطة الحالية
             slides[slideIndex].classList.add("active");
-            // تأكد من أن الفهرس صالح للنقاط أيضاً
             if (slideIndex < dots.length) {
                 dots[slideIndex].classList.add("active");
             }
