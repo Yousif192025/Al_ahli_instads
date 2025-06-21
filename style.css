@@ -458,16 +458,16 @@
             
             <div class="slideshow-container">
                 <div class="slide active">
-                    <img src="my-images/photo1.jpg" alt="صورة للمعهد">
+                    <img src="my-images/photo1.jpg" alt="قاعة تدريب المعهد">
                 </div>
                 <div class="slide">
-                    <img src="my-images/photo2.jpg" alt="صورة للمعهد">
+                    <img src="my-images/photo2.jpg" alt="ورشة عمل الطلاب">
                 </div>
                 <div class="slide">
-                    <img src="my-images/photo6.jpg" alt="صورة للمعهد">
+                    <img src="my-images/photo3.jpg" alt="معمل الحاسب الآلي">
                 </div>
                 <div class="slide">
-                    <img src="my-images/photo7.jpg" alt="صورة للمعهد">
+                    <img src="my-images/photo4.jpg" alt="حفل تخريج الطلاب">
                 </div>
                 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
