@@ -2,130 +2,195 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>المعهد الأهلي العالي للتدريب - برامج الدبلومات المعتمدة</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
         
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
+            --primary-dark: #0A2E4D;
+            --primary: #1A4A6F;
+            --secondary: #2C7DA0;
+            --accent: #E76F51;
+            --accent-light: #F4A261;
+            --light-bg: #F8FAFE;
+            --card-white: #FFFFFF;
+            --text-dark: #1E2F3E;
+            --text-muted: #5A6E7A;
+            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 25px 30px -12px rgba(0, 0, 0, 0.15);
+            --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: #f9f9f9;
-            color: var(--dark);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            background: linear-gradient(145deg, #F1F5F9 0%, #EFF2F6 100%);
+            color: var(--text-dark);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        
+        /* custom scroll */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E2E8F0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 10px;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 24px;
         }
         
+        /* HEADER REFINED */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(125deg, #0A2F44 0%, #1A5D7A 100%);
             color: white;
-            padding: 30px 0;
-            text-align: center;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            padding: 30px 0 45px;
+            border-radius: 0 0 42px 42px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 40px;
             position: relative;
             overflow: hidden;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            top: -30%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
         }
         
         .header-logos {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 35px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         
         .header-logos img {
-            height: 80px;
+            height: 85px;
             width: auto;
-            object-fit: contain;
-            background-color: transparent;
-            border: none;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
+            filter: drop-shadow(0 5px 8px rgba(0,0,0,0.2));
+            transition: var(--transition-smooth);
         }
         
         .header-logos img:hover {
-            opacity: 1;
+            transform: scale(1.05);
+            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
+        }
+        
+        header h1 {
+            font-size: 2.7rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin: 15px 0 8px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.92;
+            font-weight: 500;
+        }
+        
+        .offer-badge {
+            background: linear-gradient(95deg, var(--accent), #E25822);
+            color: white;
+            padding: 10px 28px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1rem;
+            display: inline-block;
+            margin: 18px 0 8px;
+            box-shadow: 0 8px 18px rgba(231, 111, 81, 0.3);
+            backdrop-filter: blur(2px);
+            animation: softGlow 2.2s infinite;
+        }
+        
+        @keyframes softGlow {
+            0% { box-shadow: 0 5px 15px rgba(231,111,81,0.3); transform: scale(1);}
+            50% { box-shadow: 0 12px 25px rgba(231,111,81,0.6); transform: scale(1.02);}
+            100% { box-shadow: 0 5px 15px rgba(231,111,81,0.3); transform: scale(1);}
         }
         
         header::before {
             content: "الفصل الدراسي الجديد شوال /1447";
             position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: var(--accent);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-        
-        header h1 {
-            margin: 10px 0 0;
-            font-size: 2.5rem;
-            font-weight: 900;
-        }
-        
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .offer-badge {
-            background-color: var(--accent);
-            color: white;
-            padding: 8px 15px;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(8px);
+            color: #FFE8D6;
+            padding: 6px 20px;
             border-radius: 50px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 10px 0;
-            animation: pulse 2s infinite;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            border-right: 3px solid var(--accent);
+            animation: pulseSoft 2s infinite;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
         
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        @keyframes pulseSoft {
+            0% { opacity: 0.9; transform: translateX(0);}
+            50% { opacity: 1; transform: translateX(3px);}
+            100% { opacity: 0.9; transform: translateX(0);}
         }
-
+        
         /* Video Section */
         .video-section {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
+            background: var(--card-white);
+            border-radius: 32px;
+            padding: 30px 25px;
             margin: 40px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(44, 125, 160, 0.1);
+        }
+        
+        .video-section h2 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, var(--primary), var(--secondary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            margin-bottom: 8px;
         }
         
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
+            margin: 25px auto;
+            max-width: 860px;
+            border-radius: 24px;
             overflow: hidden;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.25);
+            background: #000;
         }
         
         .video-container iframe {
@@ -134,354 +199,469 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            border: 0;
         }
-
-        /* Slideshow Section */
+        
+        /* Slideshow Section Premium */
         .slideshow-section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
+            background: var(--card-white);
+            border-radius: 32px;
+            padding: 30px 25px;
             margin: 40px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-md);
         }
         
         .slideshow-container {
             position: relative;
-            max-width: 800px;
+            max-width: 880px;
             margin: 20px auto;
+            border-radius: 28px;
             overflow: hidden;
-            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
         }
         
         .slide {
             display: none;
             width: 100%;
-            transition: opacity 1s ease;
-        }
-        
-        .slide img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .slide.active {
             display: block;
-            animation: fadeIn 1s;
+            animation: fadeSlide 0.7s ease-out;
         }
         
-        @keyframes fadeIn {
-            from {opacity: 0.4;}
-            to {opacity: 1;}
+        @keyframes fadeSlide {
+            from { opacity: 0.3; transform: scale(0.98);}
+            to { opacity: 1; transform: scale(1);}
+        }
+        
+        .slide img {
+            width: 100%;
+            display: block;
+            transition: transform 0.4s;
         }
         
         .prev, .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
+            width: 48px;
+            height: 48px;
+            margin-top: -24px;
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(6px);
             color: white;
             font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0,0,0,0.5);
-            z-index: 10;
-        }
-        
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+            font-size: 24px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            text-decoration: none;
+            z-index: 12;
         }
         
         .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
+            background: var(--accent);
+            transform: scale(1.08);
+        }
+        
+        .prev {
+            left: 20px;
+            border-radius: 60px;
+        }
+        
+        .next {
+            right: 20px;
+            border-radius: 60px;
         }
         
         .dots-container {
             text-align: center;
-            margin-top: 20px;
-            overflow-x: auto;
-            white-space: nowrap;
-            padding-bottom: 10px;
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
         }
         
         .dot {
             cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
+            height: 12px;
+            width: 12px;
+            background-color: #C9D6E0;
+            border-radius: 30px;
             display: inline-block;
-            transition: background-color 0.6s ease;
+            transition: all 0.3s ease;
         }
         
         .dot.active {
-            background-color: var(--secondary);
+            background-color: var(--accent);
+            width: 32px;
+            box-shadow: 0 0 5px var(--accent-light);
         }
         
+        /* Diplomas Grid */
         .diplomas-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
         }
         
         .diploma-card {
-            background: white;
-            border-radius: 15px;
+            background: var(--card-white);
+            border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0,0,0,0.03);
+            position: relative;
         }
         
         .diploma-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-12px);
+            box-shadow: 0 35px 40px -18px rgba(0, 0, 0, 0.2);
         }
         
         .diploma-header {
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            color: white;
-            padding: 20px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+            padding: 22px 18px;
             text-align: center;
         }
         
         .diploma-header h3 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.55rem;
+            font-weight: 800;
+            letter-spacing: -0.2px;
         }
         
         .diploma-body {
-            padding: 20px;
+            padding: 24px 20px 30px;
         }
         
         .diploma-feature {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
         }
         
         .diploma-feature i {
             color: var(--secondary);
-            margin-left: 10px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            width: 28px;
+            text-align: center;
         }
         
         .price {
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: 2.2rem;
+            font-weight: 900;
             color: var(--accent);
             text-align: center;
-            margin: 20px 0;
+            margin: 25px 0 15px;
+            background: #FFF2EC;
+            padding: 12px 8px;
+            border-radius: 40px;
         }
         
         .original-price {
             text-decoration: line-through;
-            color: #999;
-            font-size: 1.2rem;
-            display: block;
+            color: #9AAFB9;
+            font-size: 1rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-right: 12px;
         }
         
         .btn {
             display: block;
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            background: linear-gradient(105deg, var(--secondary), var(--primary));
             color: white;
             text-align: center;
-            padding: 12px;
-            border-radius: 50px;
+            padding: 14px 12px;
+            border-radius: 60px;
             text-decoration: none;
-            font-weight: bold;
-            margin: 20px auto;
-            width: 80%;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
+            font-weight: 800;
+            font-size: 1.05rem;
+            margin: 20px auto 8px;
+            width: 85%;
+            transition: var(--transition-smooth);
             border: none;
+            cursor: pointer;
             font-family: 'Tajawal', sans-serif;
-            font-size: 1rem;
+            box-shadow: 0 8px 14px -8px rgba(0,0,0,0.2);
         }
         
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+            background: linear-gradient(105deg, var(--primary), var(--secondary));
+            box-shadow: 0 12px 20px -10px rgba(26, 74, 111, 0.4);
+            letter-spacing: 0.3px;
         }
         
+        /* Courses Section */
         .courses-section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 40px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: var(--card-white);
+            border-radius: 32px;
+            padding: 35px 28px;
+            margin: 50px 0;
+            box-shadow: var(--shadow-md);
         }
         
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
         
         .course-card {
-            background: var(--light);
-            border-radius: 10px;
-            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 28px;
+            padding: 28px 20px;
             text-align: center;
+            transition: var(--transition-smooth);
+            border: 1px solid #E9EDF2;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-6px);
+            background: white;
+            box-shadow: 0 15px 25px -12px rgba(0,0,0,0.1);
+        }
+        
+        .course-card h3 {
+            font-weight: 800;
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            color: var(--primary);
         }
         
         .course-price {
-            font-size: 1.5rem;
+            font-size: 1.9rem;
+            font-weight: 800;
             color: var(--accent);
-            font-weight: bold;
-            margin: 10px 0;
+            margin: 12px 0;
         }
         
-        footer {
-            background: var(--dark);
-            color: white;
+        /* Modal improved */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 25, 35, 0.7);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: auto;
+            padding: 35px 28px;
+            border-radius: 48px;
+            width: 90%;
+            max-width: 480px;
             text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
-            border-radius: 20px 20px 0 0;
+            box-shadow: 0 45px 55px -20px rgba(0,0,0,0.3);
+            animation: modalPop 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            position: relative;
+            border: 1px solid rgba(231,111,81,0.2);
+        }
+        
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.92) translateY(25px);}
+            to { opacity: 1; transform: scale(1) translateY(0);}
+        }
+        
+        .close-btn {
+            color: #8A9BB0;
+            float: left;
+            font-size: 32px;
+            font-weight: 400;
+            cursor: pointer;
+            position: absolute;
+            left: 24px;
+            top: 16px;
+            transition: color 0.2s;
+        }
+        
+        .close-btn:hover {
+            color: var(--accent);
+        }
+        
+        .whatsapp-number {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #25D366;
+            margin: 25px 0;
+            direction: ltr;
+            background: #E9F9EF;
+            padding: 12px;
+            border-radius: 60px;
+            display: inline-block;
+            width: auto;
+            font-family: monospace;
+        }
+        
+        .copy-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 60px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 8px;
+            transition: 0.2s;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .copy-btn:hover {
+            background-color: #128C7E;
+            transform: scale(0.97);
+        }
+        
+        /* Footer Premium */
+        footer {
+            background: linear-gradient(100deg, #0A2A3B, #0B3B4F);
+            color: #EFF3F6;
+            text-align: center;
+            padding: 45px 0 30px;
+            margin-top: 70px;
+            border-radius: 42px 42px 0 0;
+            box-shadow: 0 -15px 25px -10px rgba(0,0,0,0.08);
         }
         
         .footer-logos {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
+            gap: 35px;
+            margin: 15px 0 20px;
+            flex-wrap: wrap;
         }
         
         .footer-logos img {
-            height: 60px;
+            height: 65px;
             width: auto;
-            object-fit: contain;
-            background-color: transparent;
-            border: none;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
+            filter: brightness(0) invert(1);
+            opacity: 0.85;
+            transition: 0.2s;
         }
         
         .footer-logos img:hover {
             opacity: 1;
+            transform: translateY(-3px);
         }
         
         .contact-info {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.6rem;
+            font-weight: 800;
             margin: 20px 0;
+            direction: ltr;
+            letter-spacing: 1px;
         }
         
         .whatsapp-btn {
             background: #25D366;
             color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
+            padding: 12px 32px;
+            border-radius: 60px;
             text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 15px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: 0.2s;
+            box-shadow: 0 5px 12px rgba(37,211,102,0.3);
         }
         
+        .whatsapp-btn:hover {
+            background: #1DA15A;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive finesse */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 18px;
+            }
+            header h1 {
+                font-size: 1.9rem;
+            }
             .diplomas-container {
                 grid-template-columns: 1fr;
+                gap: 25px;
             }
-            
-            header h1 {
-                font-size: 2rem;
+            .prev, .next {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
             }
-            
-            header::before {
-                font-size: 0.7rem;
-                padding: 3px 10px;
+            .price {
+                font-size: 1.8rem;
             }
-            
-            .video-container {
-                padding-bottom: 56.25%;
-            }
-            
-            .header-logos, .footer-logos {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
             .header-logos img, .footer-logos img {
-                height: 60px;
+                height: 55px;
+            }
+            header::before {
+                font-size: 0.65rem;
+                top: 12px;
+                left: 12px;
+                padding: 4px 12px;
+            }
+            .modal-content {
+                padding: 30px 20px;
+                width: 92%;
+            }
+            .whatsapp-number {
+                font-size: 1.4rem;
+            }
+            .contact-info {
+                font-size: 1.3rem;
             }
         }
-
-        /* Style for the modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
+        
+        @media (max-width: 480px) {
+            .offer-badge {
+                font-size: 0.8rem;
+                padding: 6px 18px;
+            }
+            .diploma-header h3 {
+                font-size: 1.3rem;
+            }
+            .btn {
+                width: 95%;
+            }
         }
-
-        .modal-content {
-            background-color: white;
-            margin: 15% auto;
-            padding: 30px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            animation: modalFadeIn 0.3s;
-            position: relative;
+        
+        /* additional subtle glow */
+        .diploma-card .btn:active {
+            transform: scale(0.98);
         }
-
-        @keyframes modalFadeIn {
-            from {opacity: 0; transform: translateY(-50px);}
-            to {opacity: 1; transform: translateY(0);}
+        
+        .video-section p, .slideshow-section p {
+            color: var(--text-muted);
+            font-weight: 500;
         }
-
-        .close-btn {
-            color: #aaa;
-            float: left;
-            font-size: 28px;
-            font-weight: bold;
+        
+        h2, h3 {
+            letter-spacing: -0.2px;
+        }
+        
+        a, button {
             cursor: pointer;
-            position: absolute;
-            left: 15px;
-            top: 10px;
-        }
-
-        .close-btn:hover {
-            color: black;
-        }
-
-        .whatsapp-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #25D366;
-            margin: 20px 0;
-            direction: ltr;
-        }
-
-        .copy-btn {
-            background-color: #25D366;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 10px;
-            font-family: 'Tajawal', sans-serif;
-        }
-
-        .copy-btn:hover {
-            background-color: #128C7E;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -501,8 +681,8 @@
     
     <div class="container">
         <div class="video-section">
-            <h2 style="text-align: center; color: var(--primary);">فيديو تعريفي عن المعهد</h2>
-            <p style="text-align: center; margin-bottom: 20px; color: #666;">شاهد هذا الفيديو للتعرف أكثر على برامجنا التدريبية</p>
+            <h2 style="text-align: center;">فيديو تعريفي عن المعهد</h2>
+            <p style="text-align: center; margin-bottom: 20px;">شاهد هذا الفيديو للتعرف أكثر على برامجنا التدريبية</p>
             
             <div class="video-container">
                 <iframe src="https://streamable.com/rpul8w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -510,8 +690,8 @@
         </div>
 
         <div class="slideshow-section">
-            <h2 style="text-align: center; color: var(--primary);">معرض الصور</h2>
-            <p style="text-align: center; margin-bottom: 20px; color: #666;">جولة مصورة داخل مرافق المعهد وورش العمل</p>
+            <h2 style="text-align: center;">معرض الصور</h2>
+            <p style="text-align: center; margin-bottom: 20px;">جولة مصورة داخل مرافق المعهد وورش العمل</p>
             
             <div class="slideshow-container">
                 <div class="slide active">
@@ -572,8 +752,8 @@
             </div>
         </div>
 
-        <h2 style="text-align: center; color: var(--primary); margin-bottom: 10px;">برامج الدبلومات المعتمدة</h2>
-        <p style="text-align: center; margin-bottom: 30px; color: #666;">برامج تدريبية متخصصة لمدة سنتين ونصف معتمدة بسعر مميز</p>
+        <h2 style="text-align: center; color: var(--primary); margin-bottom: 10px; font-weight: 800;">برامج الدبلومات المعتمدة</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);">برامج تدريبية متخصصة لمدة سنتين ونصف معتمدة بسعر مميز</p>
         
         <div class="diplomas-container">
             <div class="diploma-card">
@@ -595,7 +775,7 @@
                     </div>
                     
                     <div class="price">
-                        6,000 ر.س
+                        7,000 ر.س
                         <span class="original-price">24,000 ر.س</span>
                     </div>
                     
@@ -618,11 +798,11 @@
                     </div>
                     <div class="diploma-feature">
                         <i class="fas fa-percentage"></i>
-                        <span>خصم مميز للسداد الكاش- قسط شهري 300 ريال</span>
+                        <span>خصم مميز للسداد الكاش- قسط شهري 500 ريال</span>
                     </div>
                     
                     <div class="price">
-                        6,000ر.س
+                        7,000ر.س
                         <span class="original-price">25,000 ر.س</span>
                     </div>
                     
@@ -649,7 +829,7 @@
                     </div>
                     
                     <div class="price">
-                        3,900 ر.س
+                        5,000 ر.س
                         <span class="original-price">20,000 ر.س</span>
                     </div>
                     
@@ -676,7 +856,7 @@
                     </div>
                     
                     <div class="price">
-                        3,900 ر.س
+                        5,000 ر.س
                         <span class="original-price">10,200 ر.س</span>
                     </div>
                     
@@ -703,7 +883,7 @@
                     </div>
                     
                     <div class="price">
-                        3,900 ر.س
+                        5,000 ر.س
                         <span class="original-price">10,100 ر.س</span>
                     </div>
                     
@@ -730,7 +910,7 @@
                     </div>
                     
                     <div class="price">
-                        6,000 ر.س
+                        7,000 ر.س
                         <span class="original-price">25,000 ر.س</span>
                     </div>
                     
@@ -740,18 +920,18 @@
         </div>
         
         <div class="courses-section">
-            <h2 style="text-align: center; color: var(--primary); margin-bottom: 20px;">الدورات التأهيلية</h2>
+            <h2 style="text-align: center; margin-bottom: 20px;">الدورات التأهيلية</h2>
             
             <div class="courses-grid">
                 <div class="course-card">
                     <h3>دورة تأسيس اللغة الإنجليزية</h3>
-                    <div class="course-price">300 ر.س</div>
+                    <div class="course-price">500 ر.س</div>
                     <p>دورة متخصصة في الأساسيات - 3 شهور</p>
                 </div>
                 
                 <div class="course-card">
                     <h3>دورة استخدام الحاسوب</h3>
-                    <div class="course-price">499 ر.س</div>
+                    <div class="course-price">800 ر.س</div>
                     <p>دورة استخدام الحاسب في الأعمال</p>
                 </div>
                 
@@ -841,24 +1021,20 @@
             }
         }
 
-        // Auto slide change every 5 seconds
         setInterval(() => {
             plusSlides(1);
         }, 5000);
 
-        // Function to show contact modal
         function showContactModal(diplomaName) {
             document.getElementById('diplomaName').textContent = diplomaName;
             document.getElementById('modalTitle').textContent = 'التسجيل في ' + diplomaName;
-            document.getElementById('contactModal').style.display = 'block';
+            document.getElementById('contactModal').style.display = 'flex';
         }
 
-        // Function to close modal
         function closeModal() {
             document.getElementById('contactModal').style.display = 'none';
         }
 
-        // Function to copy WhatsApp number
         function copyNumber() {
             const number = '0502161465';
             navigator.clipboard.writeText(number).then(() => {
@@ -866,7 +1042,6 @@
             });
         }
 
-        // Close modal when clicking outside of it
         window.onclick = function(event) {
             const modal = document.getElementById('contactModal');
             if (event.target == modal) {
