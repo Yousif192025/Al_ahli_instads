@@ -74,7 +74,7 @@
         .bg-accent { background-color: #f59e0b; }
         .border-accent { border-color: #f59e0b; }
         
-        /* تحسينات إضافية للجوال */
+        /* تحسينات للجوال */
         .container {
             padding-left: 1rem;
             padding-right: 1rem;
@@ -84,21 +84,68 @@
             .rounded-t-[3rem] { border-top-left-radius: 1.5rem; border-top-right-radius: 1.5rem; }
             .rounded-[2.5rem] { border-radius: 1.5rem; }
         }
+        
+        /* ألوان مميزة لكل دبلوم */
+        .diploma-green .diploma-header { background: linear-gradient(135deg, #0f5c3e, #0a7e54); }
+        .diploma-orange .diploma-header { background: linear-gradient(135deg, #c2410c, #ea580c); }
+        .diploma-purple .diploma-header { background: linear-gradient(135deg, #5b21b6, #7c3aed); }
+        .diploma-pink .diploma-header { background: linear-gradient(135deg, #be185d, #db2777); }
+        .diploma-teal .diploma-header { background: linear-gradient(135deg, #0f766e, #14b8a6); }
+        .diploma-red .diploma-header { background: linear-gradient(135deg, #b91c1c, #dc2626); }
+        
+        .diploma-header {
+            position: relative;
+            height: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        @media (min-width: 768px) {
+            .diploma-header { height: 8rem; }
+        }
+        .diploma-header h3 {
+            position: relative;
+            z-index: 10;
+            font-size: 1.125rem;
+            font-weight: bold;
+            padding: 0 0.75rem;
+            color: white;
+        }
+        @media (min-width: 768px) {
+            .diploma-header h3 { font-size: 1.25rem; }
+        }
+        .diploma-header img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .group:hover .diploma-header img {
+            transform: scale(1.1);
+        }
+        .diploma-header .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header Section - محسّن للجوال -->
-    <header class="relative overflow-hidden text-white pt-8 pb-16 md:pt-12 md:pb-24 rounded-b-[3rem] shadow-2xl z-10" style="background: linear-gradient(135deg, #071a2b 0%, #0f2c44 100%);">
-        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+    <!-- Header Section - خلفية زرقاء -->
+    <header class="relative overflow-hidden text-white pt-8 pb-16 md:pt-12 md:pb-24 rounded-b-[3rem] shadow-2xl z-10" style="background: linear-gradient(135deg, #0f2c44 0%, #1a4b6e 100%);">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
             <div class="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
             <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
-        <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
         
         <div class="container mx-auto px-4 md:px-6 relative z-20">
             <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-6 md:mb-10">
-                <!-- شعارات بخلفية بيضاء -->
                 <div class="bg-white rounded-full p-1.5 md:p-2 shadow-lg">
                     <img src="my-images/log1.png" alt="شعار المعهد" class="h-12 md:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x60/0b2b44/white?text=المعهد';">
                 </div>
@@ -117,9 +164,9 @@
             </div>
         </div>
         
-        <!-- Floating Badge - يظهر في الشاشات المتوسطة والكبيرة فقط، واضح -->
+        <!-- Floating Badge - نص أبيض -->
         <div class="absolute top-4 left-4 hidden md:block z-40">
-            <div class="bg-white/95 backdrop-blur-md border-r-4 border-accent text-primary px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-bold shadow-xl">
+            <div class="bg-black/60 backdrop-blur-md border-r-4 border-accent text-white px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-bold shadow-xl">
                 الفصل الدراسي الجديد شوال /1447
             </div>
         </div>
@@ -131,7 +178,6 @@
             <h2 class="section-title">فيديو تعريفي عن المعهد</h2>
             <p class="section-subtitle">شاهد هذا الفيديو للتعرف أكثر على برامجنا التدريبية ومرافقنا المتطورة</p>
             <div class="max-w-4xl mx-auto aspect-video rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-black">
-                <!-- إضافة autoplay=1 مع mute لضمان التشغيل التلقائي -->
                 <iframe src="https://streamable.com/rpul8w?autoplay=1&mute=1" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
@@ -148,108 +194,114 @@
             </div>
         </section>
 
-        <!-- Diplomas Section - كامل 6 دبلومات مع تحسين الجوال -->
+        <!-- Diplomas Section - 6 دبلومات بألوان مختلفة -->
         <section class="mb-12 md:mb-20">
             <h2 class="section-title">برامج الدبلومات المعتمدة</h2>
             <p class="section-subtitle">برامج تدريبية متخصصة لمدة سنتين ونصف معتمدة بسعر مميز لتأهيلك لسوق العمل</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
-                <!-- دبلوم 1 -->
-                <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
-                    <div class="relative h-28 md:h-32 flex items-center justify-center text-white text-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Hospital">
-                        <div class="absolute inset-0 bg-primary/70 backdrop-blur-[2px]"></div>
-                        <h3 class="relative z-10 text-base md:text-xl font-bold px-3">دبلوم إدارة المستشفيات والخدمات الصحية</h3>
+                
+                <!-- دبلوم 1 - أخضر -->
+                <div class="diploma-green bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
+                    <div class="diploma-header">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=400&auto=format&fit=crop" alt="Hospital">
+                        <div class="overlay"></div>
+                        <h3>دبلوم إدارة المستشفيات والخدمات الصحية</h3>
                     </div>
                     <div class="p-5 md:p-8">
                         <ul class="space-y-2 md:space-y-4 mb-5 md:mb-8 text-sm md:text-base">
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-secondary w-5 md:w-6"></i><span>المدة: سنتان ونصف (87 ساعة)</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-secondary w-5 md:w-6"></i><span>شهادة معتمدة دولياً ومحلياً</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-tag text-secondary w-5 md:w-6"></i><span>خصم مميز للسداد النقدي</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-green-600 w-5 md:w-6"></i><span>المدة: سنتان ونصف (87 ساعة)</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-green-600 w-5 md:w-6"></i><span>شهادة معتمدة دولياً ومحلياً</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-tag text-green-600 w-5 md:w-6"></i><span>خصم مميز للسداد النقدي</span></li>
                         </ul>
                         <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">24,000 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div></div>
                         <button onclick="openModal('دبلوم إدارة المستشفيات والخدمات الصحية')" class="w-full btn-primary">سجل الآن</button>
                     </div>
                 </div>
-                <!-- دبلوم 2 -->
-                <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
-                    <div class="relative h-28 md:h-32 flex items-center justify-center text-white text-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Logistics">
-                        <div class="absolute inset-0 bg-primary/70 backdrop-blur-[2px]"></div>
-                        <h3 class="relative z-10 text-base md:text-xl font-bold px-3">دبلوم إدارة الخدمات اللوجستية</h3>
+                
+                <!-- دبلوم 2 - برتقالي -->
+                <div class="diploma-orange bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
+                    <div class="diploma-header">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=400&auto=format&fit=crop" alt="Logistics">
+                        <div class="overlay"></div>
+                        <h3>دبلوم إدارة الخدمات اللوجستية</h3>
                     </div>
                     <div class="p-5 md:p-8">
                         <ul class="space-y-2 md:space-y-4 mb-5 md:mb-8 text-sm md:text-base">
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-secondary w-5 md:w-6"></i><span>المدة: سنتان ونصف (87 ساعة)</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-secondary w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-credit-card text-secondary w-5 md:w-6"></i><span>قسط شهري 500 ريال فقط</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-orange-600 w-5 md:w-6"></i><span>المدة: سنتان ونصف (87 ساعة)</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-orange-600 w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-credit-card text-orange-600 w-5 md:w-6"></i><span>قسط شهري 500 ريال فقط</span></li>
                         </ul>
                         <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">25,000 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div></div>
                         <button onclick="openModal('دبلوم إدارة الخدمات اللوجستية')" class="w-full btn-primary">سجل الآن</button>
                     </div>
                 </div>
-                <!-- دبلوم 3 -->
-                <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
-                    <div class="relative h-28 md:h-32 flex items-center justify-center text-white text-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="CS">
-                        <div class="absolute inset-0 bg-primary/70 backdrop-blur-[2px]"></div>
-                        <h3 class="relative z-10 text-base md:text-xl font-bold px-3">دبلوم علوم الحاسب الآلي التطبيقي</h3>
+                
+                <!-- دبلوم 3 - بنفسجي -->
+                <div class="diploma-purple bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
+                    <div class="diploma-header">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop" alt="CS">
+                        <div class="overlay"></div>
+                        <h3>دبلوم علوم الحاسب الآلي التطبيقي</h3>
                     </div>
                     <div class="p-5 md:p-8">
                         <ul class="space-y-2 md:space-y-4 mb-5 md:mb-8 text-sm md:text-base">
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-secondary w-5 md:w-6"></i><span>المدة: سنتان ونصف (86 ساعة)</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-secondary w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-laptop-code text-secondary w-5 md:w-6"></i><span>تدريب عملي مكثف</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-purple-600 w-5 md:w-6"></i><span>المدة: سنتان ونصف (86 ساعة)</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-purple-600 w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-laptop-code text-purple-600 w-5 md:w-6"></i><span>تدريب عملي مكثف</span></li>
                         </ul>
                         <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">20,000 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">5,000 ر.س</div></div>
                         <button onclick="openModal('دبلوم علوم الحاسب الآلي التطبيقي')" class="w-full btn-primary">سجل الآن</button>
                     </div>
                 </div>
-                <!-- دبلوم 4 -->
-                <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
-                    <div class="relative h-28 md:h-32 flex items-center justify-center text-white text-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="HR">
-                        <div class="absolute inset-0 bg-primary/70 backdrop-blur-[2px]"></div>
-                        <h3 class="relative z-10 text-base md:text-xl font-bold px-3">دبلوم إدارة الموارد البشرية</h3>
+                
+                <!-- دبلوم 4 - وردي -->
+                <div class="diploma-pink bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
+                    <div class="diploma-header">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=400&auto=format&fit=crop" alt="HR">
+                        <div class="overlay"></div>
+                        <h3>دبلوم إدارة الموارد البشرية</h3>
                     </div>
                     <div class="p-5 md:p-8">
                         <ul class="space-y-2 md:space-y-4 mb-5 md:mb-8 text-sm md:text-base">
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-secondary w-5 md:w-6"></i><span>المدة: سنتان ونصف (79 ساعة)</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-secondary w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-users text-secondary w-5 md:w-6"></i><span>تأهيل للمناصب القيادية</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-pink-600 w-5 md:w-6"></i><span>المدة: سنتان ونصف (79 ساعة)</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-pink-600 w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-users text-pink-600 w-5 md:w-6"></i><span>تأهيل للمناصب القيادية</span></li>
                         </ul>
                         <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">10,200 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">5,000 ر.س</div></div>
                         <button onclick="openModal('دبلوم إدارة الموارد البشرية')" class="w-full btn-primary">سجل الآن</button>
                     </div>
                 </div>
-                <!-- دبلوم 5 -->
-                <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
-                    <div class="relative h-28 md:h-32 flex items-center justify-center text-white text-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Office">
-                        <div class="absolute inset-0 bg-primary/70 backdrop-blur-[2px]"></div>
-                        <h3 class="relative z-10 text-base md:text-xl font-bold px-3">دبلوم الإدارة المكتبية</h3>
+                
+                <!-- دبلوم 5 - تركواز -->
+                <div class="diploma-teal bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
+                    <div class="diploma-header">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=400&auto=format&fit=crop" alt="Office">
+                        <div class="overlay"></div>
+                        <h3>دبلوم الإدارة المكتبية</h3>
                     </div>
                     <div class="p-5 md:p-8">
                         <ul class="space-y-2 md:space-y-4 mb-5 md:mb-8 text-sm md:text-base">
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-secondary w-5 md:w-6"></i><span>المدة: سنتان ونصف (80 ساعة)</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-secondary w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-briefcase text-secondary w-5 md:w-6"></i><span>مهارات إدارية متكاملة</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-teal-600 w-5 md:w-6"></i><span>المدة: سنتان ونصف (80 ساعة)</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-teal-600 w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-briefcase text-teal-600 w-5 md:w-6"></i><span>مهارات إدارية متكاملة</span></li>
                         </ul>
                         <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">10,100 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">5,000 ر.س</div></div>
                         <button onclick="openModal('دبلوم الإدارة المكتبية')" class="w-full btn-primary">سجل الآن</button>
                     </div>
                 </div>
-                <!-- دبلوم 6 -->
-                <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
-                    <div class="relative h-28 md:h-32 flex items-center justify-center text-white text-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Cyber">
-                        <div class="absolute inset-0 bg-primary/70 backdrop-blur-[2px]"></div>
-                        <h3 class="relative z-10 text-base md:text-xl font-bold px-3">دبلوم الأمن السيبراني</h3>
+                
+                <!-- دبلوم 6 - أحمر -->
+                <div class="diploma-red bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-slate-100 group">
+                    <div class="diploma-header">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&auto=format&fit=crop" alt="Cyber">
+                        <div class="overlay"></div>
+                        <h3>دبلوم الأمن السيبراني</h3>
                     </div>
                     <div class="p-5 md:p-8">
                         <ul class="space-y-2 md:space-y-4 mb-5 md:mb-8 text-sm md:text-base">
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-secondary w-5 md:w-6"></i><span>المدة: سنتان ونصف (83 ساعة)</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-secondary w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
-                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-shield-alt text-secondary w-5 md:w-6"></i><span>تخصص المستقبل الواعد</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-clock text-red-600 w-5 md:w-6"></i><span>المدة: سنتان ونصف (83 ساعة)</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-red-600 w-5 md:w-6"></i><span>شهادة معتمدة</span></li>
+                            <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-shield-alt text-red-600 w-5 md:w-6"></i><span>تخصص المستقبل الواعد</span></li>
                         </ul>
                         <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">25,000 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div></div>
                         <button onclick="openModal('دبلوم الأمن السيبراني')" class="w-full btn-primary">سجل الآن</button>
@@ -258,7 +310,7 @@
             </div>
         </section>
 
-        <!-- Courses Section - محسن للجوال -->
+        <!-- Courses Section -->
         <section class="bg-slate-900 text-white rounded-[2rem] md:rounded-[3rem] p-5 md:p-16 mb-12 md:mb-20 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 bg-accent/10 rounded-full blur-3xl"></div>
             <div class="relative z-10">
