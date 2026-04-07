@@ -66,7 +66,7 @@
 </head>
 <body>
 
-    <!-- Header Section - خلفية أغمق + طبقة تراكب + ظل نص قوي -->
+    <!-- Header Section -->
     <header class="relative overflow-hidden text-white pt-12 pb-24 rounded-b-[3rem] shadow-2xl z-10" style="background: linear-gradient(135deg, #071a2b 0%, #0f2c44 100%);">
         <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
             <div class="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -76,11 +76,12 @@
         
         <div class="container mx-auto px-6 relative z-20">
             <div class="flex flex-wrap justify-center items-center gap-8 mb-10">
-                <div class="bg-white/10 p-2 rounded-2xl backdrop-blur-sm">
-                    <img src="my-images/log1.png" alt="شعار المعهد" class="h-20 md:h-24 drop-shadow-xl hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/200x80/ffffff/0b2b44?text=المعهد';">
+                <!-- شعارات بخلفية بيضاء دائرية لتفادي اللون الداكن -->
+                <div class="bg-white rounded-full p-2 shadow-lg">
+                    <img src="my-images/log1.png" alt="شعار المعهد" class="h-16 md:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/160x80/0b2b44/white?text=المعهد';">
                 </div>
-                <div class="bg-white/10 p-2 rounded-2xl backdrop-blur-sm">
-                    <img src="my-images/logo.png" alt="شعار المؤسسة" class="h-20 md:h-24 drop-shadow-xl hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='https://placehold.co/200x80/ffffff/0b2b44?text=TVTC';">
+                <div class="bg-white rounded-full p-2 shadow-lg">
+                    <img src="my-images/logo.png" alt="شعار المؤسسة" class="h-16 md:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/160x80/0b2b44/white?text=TVTC';">
                 </div>
             </div>
             
@@ -94,8 +95,9 @@
             </div>
         </div>
         
-        <div class="absolute top-6 left-6 hidden md:block z-30">
-            <div class="bg-black/80 backdrop-blur-md border-r-4 border-accent text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
+        <!-- Floating Badge - خلفية فاتحة ونص غامق ليظهر بوضوح -->
+        <div class="absolute top-6 left-6 hidden md:block z-40">
+            <div class="bg-white/95 backdrop-blur-md border-r-4 border-accent text-primary px-5 py-2 rounded-lg text-sm font-bold shadow-xl">
                 الفصل الدراسي الجديد شوال /1447
             </div>
         </div>
@@ -111,7 +113,7 @@
             </div>
         </section>
 
-        <!-- Slideshow Section - كامل -->
+        <!-- Slideshow Section -->
         <section class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl mb-16 border border-slate-100">
             <h2 class="section-title">معرض الصور</h2>
             <p class="section-subtitle">جولة مصورة داخل مرافق المعهد وورش العمل المجهزة بأحدث التقنيات</p>
@@ -123,7 +125,7 @@
             </div>
         </section>
 
-        <!-- Diplomas Section - كامل 6 دبلومات -->
+        <!-- Diplomas Section - 6 دبلومات كاملة -->
         <section class="mb-20">
             <h2 class="section-title">برامج الدبلومات المعتمدة</h2>
             <p class="section-subtitle">برامج تدريبية متخصصة لمدة سنتين ونصف معتمدة بسعر مميز لتأهيلك لسوق العمل</p>
@@ -311,7 +313,7 @@
     </div>
 
     <script>
-        // ---------- SLIDESHOW كامل (10 صور) ----------
+        // ---------- SLIDESHOW (10 صور) ----------
         const images = [
             "my-images/photo1.jpg", "my-images/photo2.jpg", "my-images/photo3.jpg", "my-images/photo4.jpg", "my-images/photo5.jpg",
             "my-images/photo6.jpg", "my-images/photo7.jpg", "my-images/photo8.jpg", "my-images/photo9.jpg", "my-images/photo10.jpg"
@@ -394,26 +396,19 @@
             });
         }
 
-        // ---------- INITIALIZATION ----------
         window.addEventListener('DOMContentLoaded', () => {
             buildSlideshow();
-            const nextBtn = document.getElementById('nextBtn');
-            const prevBtn = document.getElementById('prevBtn');
-            if(nextBtn) nextBtn.addEventListener('click', nextSlide);
-            if(prevBtn) prevBtn.addEventListener('click', prevSlide);
+            document.getElementById('prevBtn')?.addEventListener('click', prevSlide);
+            document.getElementById('nextBtn')?.addEventListener('click', nextSlide);
             resetAutoSlide();
-            const modal = document.getElementById('contactModal');
-            modal.addEventListener('click', (e) => {
-                if(e.target === modal) closeModal();
+            document.getElementById('contactModal').addEventListener('click', (e) => {
+                if(e.target === document.getElementById('contactModal')) closeModal();
             });
         });
         
-        // تصدير الدوال للاستخدام العالمي
         window.openModal = openModal;
         window.closeModal = closeModal;
         window.copyNumber = copyNumber;
-        window.nextSlide = nextSlide;
-        window.prevSlide = prevSlide;
     </script>
 </body>
 </html>
