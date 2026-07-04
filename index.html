@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -11,8 +10,6 @@
     <meta name="keywords" content="المعهد الأهلي العالي للتدريب, دبلومات معتمدة, دبلوم التمريض, دبلوم إدارة التمريض, تدريب تقني ومهني, القريات">
     <meta name="author" content="المعهد الأهلي العالي للتدريب">
     <meta name="robots" content="index, follow">
-
-    <!-- يرجى استبدال رابط الكانونيكال أدناه بنطاق الموقع الفعلي بعد النشر -->
     <link rel="canonical" href="https://www.your-domain-here.com/">
 
     <!-- ============================= SEO: Open Graph ============================= -->
@@ -32,20 +29,20 @@
     <!-- ============================= SEO: Schema.org (JSON-LD) ============================= -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "المعهد الأهلي العالي للتدريب",
-      "logo": "my-images/logo.png",
-      "image": "my-images/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "محافظة القريات",
-        "addressCountry": "SA"
-      },
-      "telephone": "+966502161465",
-      "sameAs": [
-        "https://wa.me/966502161465"
-      ]
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "المعهد الأهلي العالي للتدريب",
+        "logo": "my-images/logo.png",
+        "image": "my-images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "محافظة القريات",
+            "addressCountry": "SA"
+        },
+        "telephone": "+966502161465",
+        "sameAs": [
+            "https://wa.me/966502161465"
+        ]
     }
     </script>
 
@@ -55,7 +52,6 @@
     <style>
         /* ==================================================================
            0) نظام التصميم (Design Tokens)
-           الهوية: كحلي عميق + ذهبي (شارة الاعتماد) + أخضر (التوفر) + رمادي (الإيقاف)
         ================================================================== */
         :root {
             --navy-950: #081b2b;
@@ -188,6 +184,9 @@
             font-size: 0.95rem;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
         }
         @media (min-width: 768px) { .btn-primary { padding: 15px 22px; font-size: 1.02rem; } }
         .btn-primary::after {
@@ -216,6 +215,9 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
         }
         .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 18px 34px rgba(245,158,11,0.5); }
 
@@ -230,6 +232,8 @@
             justify-content: center;
             gap: 0.5rem;
             backdrop-filter: blur(6px);
+            text-decoration: none;
+            cursor: pointer;
         }
         .btn-ghost:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.6); transform: translateY(-3px); }
 
@@ -249,7 +253,7 @@
         }
 
         /* ==================================================================
-           3) قسم الهيرو - الشارة/الختم المرافق (العنصر المميز للتصميم)
+           3) قسم الهيرو
         ================================================================== */
         .hero-seal {
             position: relative;
@@ -298,7 +302,7 @@
         @keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
 
         /* ==================================================================
-           4) الحاويات وتحسينات الجوال / بطاقات الدبلومات
+           4) بطاقات الدبلومات
         ================================================================== */
         .diploma-nursing1 .diploma-header { background: linear-gradient(135deg, #1e3a8a, #2563eb); }
         .diploma-nursing2 .diploma-header { background: linear-gradient(135deg, #0e7490, #06b6d4); }
@@ -472,12 +476,17 @@
         .sticky-cta .cta-text { color: #fff; font-weight: 700; font-size: 0.8rem; line-height: 1.3; }
         .sticky-cta .cta-btn { flex-shrink: 0; white-space: nowrap; }
         @media (max-width: 767px) { body { padding-bottom: 4.5rem; } }
+
+        /* ==================================================================
+           10) السلايد شو
+        ================================================================== */
+        .slide { transition: opacity 0.7s ease-in-out; }
     </style>
 </head>
 <body>
 
     <!-- ======================================================================
-         HEADER / HERO SECTION - الشعارات + اسم المعهد (بدون أي تغيير في الشعارات أو الاسم)
+         HEADER / HERO SECTION
     ====================================================================== -->
     <header class="relative overflow-hidden text-white pt-8 pb-16 md:pt-14 md:pb-28 rounded-b-[3rem] shadow-2xl z-10" style="background: linear-gradient(135deg, #0f2c44 0%, #1a4b6e 100%);">
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -497,7 +506,6 @@
             </div>
 
             <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
-                <!-- عمود النص -->
                 <div class="text-center lg:text-right max-w-2xl mx-auto lg:mx-0 px-2">
                     <span class="section-eyebrow" style="background:rgba(255,255,255,0.12); color:#ffd98a;">
                         <i class="fas fa-shield-halved" aria-hidden="true"></i> معتمد من المؤسسة العامة للتدريب التقني والمهني
@@ -521,7 +529,6 @@
                     </div>
                 </div>
 
-                <!-- عمود الختم المرئي (العنصر المميز) - يظهر في الشاشات الكبيرة -->
                 <div class="hidden lg:block relative">
                     <div class="hero-seal">
                         <div class="ring"></div>
@@ -535,7 +542,6 @@
             </div>
         </div>
 
-        <!-- Floating Badge - نص أبيض -->
         <div class="absolute top-4 left-4 hidden md:block z-40">
             <div class="bg-black/60 backdrop-blur-md border-r-4 border-accent text-white px-3 py-1.5 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-bold shadow-xl">
                 الفصل الدراسي الجديد شوال /1447
@@ -546,7 +552,7 @@
     <main class="container mx-auto px-4 md:px-6 relative z-20 mt-6 md:mt-8">
 
         <!-- ======================================================================
-             FEATURES SECTION - قسم المميزات (مباشرة بعد Hero كما هو مطلوب)
+             FEATURES SECTION - قسم المميزات
         ====================================================================== -->
         <section class="mb-12 md:mb-20 reveal">
             <div class="text-center">
@@ -589,7 +595,7 @@
         </section>
 
         <!-- ======================================================================
-             VIDEO SECTION - فيديو تعريفي (بدون أي تغيير في الرابط)
+             VIDEO SECTION - فيديو تعريفي (تم استعادته)
         ====================================================================== -->
         <section class="bg-white rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-12 shadow-xl mb-12 md:mb-16 border border-slate-100 reveal">
             <h2 class="section-title">فيديو تعريفي عن المعهد</h2>
@@ -600,7 +606,7 @@
         </section>
 
         <!-- ======================================================================
-             SLIDESHOW SECTION - معرض الصور (تمت إضافة كل صور المعرض المتاحة في المستودع بدون حذف أي صورة سابقة)
+             SLIDESHOW SECTION - معرض الصور (تم استعادة جميع الصور)
         ====================================================================== -->
         <section class="bg-white rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-12 shadow-xl mb-12 md:mb-16 border border-slate-100 reveal">
             <h2 class="section-title">معرض الصور</h2>
@@ -614,10 +620,7 @@
         </section>
 
         <!-- ======================================================================
-             DIPLOMAS SECTION
-             الترتيب: دبلوم التمريض -> دبلوم إدارة التمريض -> بقية الدبلومات الحالية بنفس ترتيبها الأصلي.
-             تم الإبقاء على دبلوم علوم الحاسب الآلي التطبيقي في مكانه، مع تعطيل زر التسجيل واستبداله
-             بشارة "التسجيل مغلق حالياً" فقط - دون حذف الدبلوم أو صورته.
+             DIPLOMAS SECTION - الدبلومات (مرتبة حسب المطلوب)
         ====================================================================== -->
         <section id="diplomas" class="mb-12 md:mb-20 scroll-mt-6">
             <div class="text-center">
@@ -650,7 +653,7 @@
                     </div>
                 </div>
 
-                <!-- دبلوم 2 - دبلوم إدارة التمريض (جديد - أحدث دبلوم، تصميم مميز) -->
+                <!-- دبلوم 2 - دبلوم إدارة التمريض (جديد - أحدث دبلوم) -->
                 <div class="diploma-card is-featured diploma-nursing2 relative bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.05s;">
                     <span class="ribbon"><i class="fas fa-bolt" aria-hidden="true"></i> أحدث دبلوم</span>
                     <div class="diploma-header">
@@ -674,7 +677,7 @@
                     </div>
                 </div>
 
-                <!-- دبلوم 3 - إدارة المستشفيات (أخضر) -->
+                <!-- دبلوم 3 - إدارة المستشفيات -->
                 <div class="diploma-card diploma-green bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.1s;">
                     <div class="diploma-header">
                         <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=400&auto=format&fit=crop" alt="Hospital">
@@ -692,7 +695,7 @@
                     </div>
                 </div>
 
-                <!-- دبلوم 4 - الخدمات اللوجستية (برتقالي) -->
+                <!-- دبلوم 4 - الخدمات اللوجستية -->
                 <div class="diploma-card diploma-orange bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.15s;">
                     <div class="diploma-header">
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=400&auto=format&fit=crop" alt="Logistics">
@@ -710,7 +713,7 @@
                     </div>
                 </div>
 
-                <!-- دبلوم 5 - علوم الحاسب الآلي التطبيقي (غير متاح حالياً - محتفظ به بدون حذف) -->
+                <!-- دبلوم 5 - علوم الحاسب الآلي التطبيقي (غير متاح - مع إزالة زر التسجيل) -->
                 <div class="diploma-card is-disabled diploma-purple bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.2s;">
                     <span class="ribbon ribbon-muted"><i class="fas fa-clock" aria-hidden="true"></i> سيفتح قريباً</span>
                     <div class="diploma-header">
@@ -729,7 +732,7 @@
                     </div>
                 </div>
 
-                <!-- دبلوم 6 - الموارد البشرية (وردي) -->
+                <!-- دبلوم 6 - الموارد البشرية -->
                 <div class="diploma-card diploma-pink bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.25s;">
                     <div class="diploma-header">
                         <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=400&auto=format&fit=crop" alt="HR">
@@ -747,7 +750,7 @@
                     </div>
                 </div>
 
-                <!-- دبلوم 7 - الإدارة المكتبية (تركواز) -->
+                <!-- دبلوم 7 - الإدارة المكتبية -->
                 <div class="diploma-card diploma-teal bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.3s;">
                     <div class="diploma-header">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=400&auto=format&fit=crop" alt="Office">
@@ -765,7 +768,7 @@
                     </div>
                 </div>
 
-                <!-- دبلوم 8 - الأمن السيبراني (أحمر) -->
+                <!-- دبلوم 8 - الأمن السيبراني -->
                 <div class="diploma-card diploma-red bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.35s;">
                     <div class="diploma-header">
                         <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&auto=format&fit=crop" alt="Cyber">
@@ -832,7 +835,7 @@
         </section>
 
         <!-- ======================================================================
-             STATS SECTION - عداد الإنجازات (الأرقام قابلة للتعديل بسهولة عبر data-target)
+             STATS SECTION - عداد الإنجازات
         ====================================================================== -->
         <section class="bg-white rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-14 shadow-xl mb-12 md:mb-20 border border-slate-100 reveal" id="statsSection">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
@@ -856,7 +859,7 @@
         </section>
 
         <!-- ======================================================================
-             COURSES SECTION - الدورات التأهيلية (بدون تغيير في المحتوى)
+             COURSES SECTION - الدورات التأهيلية
         ====================================================================== -->
         <section class="bg-slate-900 text-white rounded-[2rem] md:rounded-[3rem] p-5 md:p-16 mb-12 md:mb-20 relative overflow-hidden reveal">
             <div class="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 bg-accent/10 rounded-full blur-3xl"></div>
@@ -932,7 +935,7 @@
     </footer>
 
     <!-- ======================================================================
-         MODAL - نافذة التسجيل / التواصل (بدون أي تغيير في وظيفتها، الرقم، أو رابط الواتساب)
+         MODAL - نافذة التسجيل
     ====================================================================== -->
     <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-3 md:p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="bg-white rounded-[1.5rem] md:rounded-[2.5rem] w-full max-w-lg overflow-hidden shadow-2xl animate-in">
@@ -960,7 +963,7 @@
     </div>
 
     <script>
-        // ---------- SLIDESHOW (كل صور المعرض المتاحة في المستودع) ----------
+        // ---------- SLIDESHOW (جميع صور المعرض) ----------
         const images = [
             "my-images/photo1.jpg", "my-images/photo2.jpg", "my-images/photo3.jpg", "my-images/photo4.jpg", "my-images/photo5.jpg",
             "my-images/photo6.jpg", "my-images/photo7.jpg", "my-images/photo8.jpg", "my-images/photo9.jpg", "my-images/photo10.jpg",
@@ -1021,7 +1024,7 @@
         function goToSlide(index) { currentSlide = index; updateSlideshow(); resetAutoSlide(); }
         function resetAutoSlide() { if(slideshowInterval) clearInterval(slideshowInterval); slideshowInterval = setInterval(() => nextSlide(), 5000); }
 
-        // ---------- MODAL FUNCTIONS (بدون أي تغيير في المنطق) ----------
+        // ---------- MODAL FUNCTIONS ----------
         function openModal(diplomaName) {
             const modal = document.getElementById('contactModal');
             const diplomaSpan = document.getElementById('diplomaName');
@@ -1045,7 +1048,7 @@
             });
         }
 
-        // ---------- COUNTER ANIMATION (عداد الإنجازات - الأرقام تُقرأ من data-target تلقائياً) ----------
+        // ---------- COUNTER ANIMATION ----------
         function animateCounter(el) {
             const target = parseInt(el.dataset.target, 10) || 0;
             const suffix = el.dataset.suffix || '';
@@ -1061,7 +1064,7 @@
             requestAnimationFrame(step);
         }
 
-        // ---------- REVEAL ON SCROLL (حركات ظهور خفيفة عند التمرير) ----------
+        // ---------- REVEAL ON SCROLL ----------
         function setupRevealObserver() {
             const revealEls = document.querySelectorAll('.reveal');
             const statNumbers = document.querySelectorAll('.stat-number');
