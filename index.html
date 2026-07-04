@@ -4,54 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
 
-    <!-- ============================= SEO: Title & Meta Description ============================= -->
+    <!-- ============================= SEO ============================= -->
     <title>دبلومات المعهد الأهلي العالي للتدريب | شهادات معتمدة للرجال والنساء</title>
-    <meta name="description" content="التحق بدبلومات المعهد الأهلي العالي للتدريب المعتمدة من المؤسسة العامة للتدريب التقني والمهني. تخصصات التمريض، إدارة التمريض، إدارة المستشفيات، اللوجستية، الموارد البشرية والمزيد. التسجيل متاح للرجال والنساء بأقساط ميسرة.">
+    <meta name="description" content="التحق بدبلومات المعهد الأهلي العالي للتدريب المعتمدة من المؤسسة العامة للتدريب التقني والمهني. تخصصات التمريض، إدارة التمريض، إدارة المستشفيات، اللوجستية، الموارد البشرية والمزيد.">
     <meta name="keywords" content="المعهد الأهلي العالي للتدريب, دبلومات معتمدة, دبلوم التمريض, دبلوم إدارة التمريض, تدريب تقني ومهني, القريات">
     <meta name="author" content="المعهد الأهلي العالي للتدريب">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.your-domain-here.com/">
 
-    <!-- ============================= SEO: Open Graph ============================= -->
+    <!-- ============================= Open Graph ============================= -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_SA">
     <meta property="og:title" content="دبلومات المعهد الأهلي العالي للتدريب | شهادات معتمدة للرجال والنساء">
-    <meta property="og:description" content="دبلومات معتمدة في التمريض، إدارة التمريض، إدارة المستشفيات، اللوجستية، الموارد البشرية وغيرها. التسجيل متاح الآن للرجال والنساء بأقساط ميسرة.">
+    <meta property="og:description" content="دبلومات معتمدة في التمريض، إدارة التمريض، إدارة المستشفيات، اللوجستية، الموارد البشرية وغيرها.">
     <meta property="og:image" content="my-images/logo.png">
     <meta property="og:site_name" content="المعهد الأهلي العالي للتدريب">
 
-    <!-- ============================= SEO: Twitter Card ============================= -->
+    <!-- ============================= Twitter Card ============================= -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="دبلومات المعهد الأهلي العالي للتدريب">
     <meta name="twitter:description" content="دبلومات معتمدة للرجال والنساء - التحق الآن بأقساط ميسرة.">
     <meta name="twitter:image" content="my-images/logo.png">
 
-    <!-- ============================= SEO: Schema.org (JSON-LD) ============================= -->
+    <!-- ============================= Schema.org ============================= -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
         "name": "المعهد الأهلي العالي للتدريب",
         "logo": "my-images/logo.png",
-        "image": "my-images/logo.png",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "محافظة القريات",
             "addressCountry": "SA"
         },
-        "telephone": "+966502161465",
-        "sameAs": [
-            "https://wa.me/966502161465"
-        ]
+        "telephone": "+966502161465"
     }
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         /* ==================================================================
-           0) نظام التصميم (Design Tokens)
+           التصميم الأساسي
         ================================================================== */
         :root {
             --navy-950: #081b2b;
@@ -73,35 +70,18 @@
         html { scroll-behavior: smooth; }
         body { background: var(--bg-soft); overflow-x: hidden; }
 
-        a:focus-visible, button:focus-visible {
-            outline: 3px solid var(--gold-500);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-
-        .dir-ltr { direction: ltr; }
         .bg-primary { background-color: var(--navy-900); }
         .text-primary { color: var(--navy-900); }
         .text-accent { color: var(--gold-500); }
         .bg-accent { background-color: var(--gold-500); }
         .border-accent { border-color: var(--gold-500); }
 
-        .container { padding-left: 1rem; padding-right: 1rem; }
-        @media (max-width: 640px) {
-            .rounded-b-\[3rem\] { border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem; }
-            .rounded-t-\[3rem\] { border-top-left-radius: 1.5rem; border-top-right-radius: 1.5rem; }
-            .rounded-\[2\.5rem\] { border-radius: 1.5rem; }
-        }
-
-        /* ==================================================================
-           1) الطباعة (Fluid Typography)
-        ================================================================== */
         .h-display {
             font-size: clamp(1.9rem, 1.35rem + 2.6vw, 4.2rem);
             font-weight: 900;
             line-height: 1.12;
-            letter-spacing: -0.01em;
         }
+        
         .section-eyebrow {
             display: inline-flex;
             align-items: center;
@@ -115,6 +95,7 @@
             border-radius: 999px;
             margin-bottom: 0.85rem;
         }
+        
         .section-title {
             font-size: clamp(1.5rem, 1.3rem + 1vw, 2.4rem);
             font-weight: 900;
@@ -124,7 +105,6 @@
             position: relative;
             display: inline-block;
             width: 100%;
-            animation: fadeInUp 0.6s ease both;
         }
         .section-title:after {
             content: '';
@@ -135,6 +115,7 @@
             margin: 14px auto 0;
             border-radius: 4px;
         }
+        
         .section-subtitle {
             text-align: center;
             color: #475569;
@@ -166,7 +147,7 @@
         .hero-text-shadow { text-shadow: 0 4px 15px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.4); }
 
         /* ==================================================================
-           2) الأزرار
+           الأزرار
         ================================================================== */
         .btn-primary {
             background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-600) 100%);
@@ -187,6 +168,7 @@
             cursor: pointer;
             border: none;
             text-decoration: none;
+            width: 100%;
         }
         @media (min-width: 768px) { .btn-primary { padding: 15px 22px; font-size: 1.02rem; } }
         .btn-primary::after {
@@ -203,7 +185,6 @@
             box-shadow: var(--shadow-lift);
             background: linear-gradient(135deg, #0f2b4f 0%, #1e3a6b 100%);
         }
-        .btn-primary:active { transform: translateY(-1px) scale(0.98); }
 
         .btn-accent {
             background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-600) 100%);
@@ -253,66 +234,8 @@
         }
 
         /* ==================================================================
-           3) قسم الهيرو
+           بطاقات الدبلومات
         ================================================================== */
-        .hero-seal {
-            position: relative;
-            width: 15rem;
-            height: 15rem;
-            margin: 0 auto;
-        }
-        .hero-seal .ring {
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            border: 2px dashed rgba(245,158,11,0.55);
-            animation: spin 26s linear infinite;
-        }
-        .hero-seal .ring-2 {
-            position: absolute;
-            inset: 1.25rem;
-            border-radius: 50%;
-            border: 2px solid rgba(255,255,255,0.25);
-        }
-        .hero-seal .core {
-            position: absolute;
-            inset: 2.75rem;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 20px 45px rgba(245,158,11,0.45);
-        }
-        .hero-seal .core i { font-size: 3rem; color: var(--navy-900); }
-        .hero-float-chip {
-            position: absolute;
-            background: rgba(255,255,255,0.97);
-            color: var(--navy-900);
-            font-weight: 800;
-            font-size: 0.72rem;
-            padding: 0.5rem 0.9rem;
-            border-radius: 999px;
-            box-shadow: var(--shadow-soft);
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            animation: floatSlow 4.5s ease-in-out infinite;
-        }
-        @keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
-
-        /* ==================================================================
-           4) بطاقات الدبلومات
-        ================================================================== */
-        .diploma-nursing1 .diploma-header { background: linear-gradient(135deg, #1e3a8a, #2563eb); }
-        .diploma-nursing2 .diploma-header { background: linear-gradient(135deg, #0e7490, #06b6d4); }
-        .diploma-green    .diploma-header { background: linear-gradient(135deg, #0f5c3e, #0a7e54); }
-        .diploma-orange   .diploma-header { background: linear-gradient(135deg, #c2410c, #ea580c); }
-        .diploma-purple   .diploma-header { background: linear-gradient(135deg, #64748b, #94a3b8); filter: grayscale(0.35); }
-        .diploma-pink     .diploma-header { background: linear-gradient(135deg, #be185d, #db2777); }
-        .diploma-teal     .diploma-header { background: linear-gradient(135deg, #0f766e, #14b8a6); }
-        .diploma-red      .diploma-header { background: linear-gradient(135deg, #b91c1c, #dc2626); }
-
         .diploma-card {
             animation: fadeInUp 0.6s ease both;
             transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
@@ -328,7 +251,6 @@
             box-shadow: 0 20px 45px rgba(245,158,11,0.22);
         }
         .diploma-card.is-disabled { opacity: 0.85; }
-        .diploma-card.is-disabled .diploma-header img { filter: grayscale(1); opacity: 0.75; }
 
         .diploma-header {
             position: relative;
@@ -356,7 +278,6 @@
             object-fit: cover;
             transition: transform 0.5s;
         }
-        .group:hover .diploma-header img { transform: scale(1.1); }
         .diploma-header .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
 
         .ribbon {
@@ -378,7 +299,7 @@
         }
 
         /* ==================================================================
-           5) بطاقات المميزات ولماذا تختار المعهد
+           بطاقات المميزات
         ================================================================== */
         .feature-card {
             background: #fff;
@@ -387,7 +308,6 @@
             padding: 1.75rem 1.25rem;
             text-align: center;
             transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-            animation: fadeInUp 0.6s ease both;
         }
         .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); border-color: var(--gold-500); }
         .feature-icon {
@@ -402,6 +322,9 @@
         }
         .feature-card:hover .feature-icon { transform: scale(1.1) rotate(-5deg); }
 
+        /* ==================================================================
+           لماذا تختار المعهد
+        ================================================================== */
         .why-card {
             display: flex; gap: 1rem; align-items: flex-start;
             background: rgba(255,255,255,0.05);
@@ -409,7 +332,6 @@
             border-radius: 1.25rem;
             padding: 1.5rem;
             transition: all 0.35s ease;
-            animation: fadeInUp 0.6s ease both;
         }
         .why-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
         .why-icon {
@@ -419,14 +341,13 @@
         }
 
         /* ==================================================================
-           6) قسم الإحصائيات
+           الإحصائيات
         ================================================================== */
-        .stat-box { position: relative; }
         .stat-number { font-size: 2.1rem; font-weight: 900; color: var(--gold-500); }
         @media (min-width: 768px) { .stat-number { font-size: 2.75rem; } }
 
         /* ==================================================================
-           7) شريط CTA قبل الفوتر
+           شريط CTA
         ================================================================== */
         .cta-banner {
             background: linear-gradient(120deg, var(--navy-950) 0%, var(--navy-900) 45%, var(--blue-700) 100%);
@@ -442,27 +363,17 @@
         }
 
         /* ==================================================================
-           8) الحركات (CSS فقط)
+           الحركات
         ================================================================== */
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px);} to { opacity: 1; transform: translateY(0);} }
         @keyframes floatSlow { 0%, 100% { transform: translateY(0);} 50% { transform: translateY(-10px);} }
         .float-slow { animation: floatSlow 4s ease-in-out infinite; }
-        .animate-in { animation: fadeInUp 0.35s ease both; }
 
         .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.001ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.001ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-
         /* ==================================================================
-           9) زر التسجيل الثابت في الجوال
+           زر التسجيل الثابت في الجوال
         ================================================================== */
         .sticky-cta {
             position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
@@ -478,7 +389,7 @@
         @media (max-width: 767px) { body { padding-bottom: 4.5rem; } }
 
         /* ==================================================================
-           10) السلايد شو
+           السلايد شو
         ================================================================== */
         .slide { transition: opacity 0.7s ease-in-out; }
     </style>
@@ -486,7 +397,7 @@
 <body>
 
     <!-- ======================================================================
-         HEADER / HERO SECTION
+         HERO SECTION
     ====================================================================== -->
     <header class="relative overflow-hidden text-white pt-8 pb-16 md:pt-14 md:pb-28 rounded-b-[3rem] shadow-2xl z-10" style="background: linear-gradient(135deg, #0f2c44 0%, #1a4b6e 100%);">
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -498,10 +409,10 @@
         <div class="container mx-auto px-4 md:px-6 relative z-20">
             <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-8 md:mb-12">
                 <div class="bg-white rounded-full p-1.5 md:p-2 shadow-lg">
-                    <img src="my-images/log1.png" alt="شعار المعهد" class="h-12 md:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x60/0b2b44/white?text=المعهد';">
+                    <img src="my-images/log1.png" alt="شعار المعهد" class="h-12 md:h-20 w-auto">
                 </div>
                 <div class="bg-white rounded-full p-1.5 md:p-2 shadow-lg">
-                    <img src="my-images/logo.png" alt="شعار المؤسسة" class="h-12 md:h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x60/0b2b44/white?text=TVTC';">
+                    <img src="my-images/logo.png" alt="شعار المؤسسة" class="h-12 md:h-20 w-auto">
                 </div>
             </div>
 
@@ -523,21 +434,20 @@
                     </div>
 
                     <div class="flex flex-wrap justify-center lg:justify-start gap-2.5 md:gap-3 mt-6 md:mt-8">
-                        <span class="hero-float-chip static animate-none"><i class="fas fa-certificate text-accent" aria-hidden="true"></i> شهادات معتمدة</span>
-                        <span class="hero-float-chip static animate-none"><i class="fas fa-venus-mars text-accent" aria-hidden="true"></i> للرجال والنساء</span>
-                        <span class="hero-float-chip static animate-none"><i class="fas fa-credit-card text-accent" aria-hidden="true"></i> أقساط ميسرة</span>
+                        <span class="bg-white/10 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold"><i class="fas fa-certificate text-accent" aria-hidden="true"></i> شهادات معتمدة</span>
+                        <span class="bg-white/10 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold"><i class="fas fa-venus-mars text-accent" aria-hidden="true"></i> للرجال والنساء</span>
+                        <span class="bg-white/10 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold"><i class="fas fa-credit-card text-accent" aria-hidden="true"></i> أقساط ميسرة</span>
                     </div>
                 </div>
 
                 <div class="hidden lg:block relative">
-                    <div class="hero-seal">
-                        <div class="ring"></div>
-                        <div class="ring-2"></div>
-                        <div class="core"><i class="fas fa-award" aria-hidden="true"></i></div>
+                    <div class="hero-seal" style="position:relative; width:15rem; height:15rem; margin:0 auto;">
+                        <div style="position:absolute; inset:0; border-radius:50%; border:2px dashed rgba(245,158,11,0.55); animation:spin 26s linear infinite;"></div>
+                        <div style="position:absolute; inset:1.25rem; border-radius:50%; border:2px solid rgba(255,255,255,0.25);"></div>
+                        <div style="position:absolute; inset:2.75rem; border-radius:50%; background:linear-gradient(135deg, var(--gold-500), var(--gold-600)); display:flex; align-items:center; justify-content:center; box-shadow:0 20px 45px rgba(245,158,11,0.45);">
+                            <i class="fas fa-award" style="font-size:3rem; color:var(--navy-900);"></i>
+                        </div>
                     </div>
-                    <div class="hero-float-chip" style="top: -0.5rem; left: -1rem;"><i class="fas fa-user-graduate text-accent" aria-hidden="true"></i> +1500 متدرب</div>
-                    <div class="hero-float-chip" style="bottom: 1rem; right: -1.5rem; animation-delay:1s;"><i class="fas fa-briefcase text-accent" aria-hidden="true"></i> فرص توظيف</div>
-                    <div class="hero-float-chip" style="bottom: -1.5rem; left: 2rem; animation-delay:2s;"><i class="fas fa-star text-accent" aria-hidden="true"></i> تقييم 98%</div>
                 </div>
             </div>
         </div>
@@ -552,7 +462,7 @@
     <main class="container mx-auto px-4 md:px-6 relative z-20 mt-6 md:mt-8">
 
         <!-- ======================================================================
-             FEATURES SECTION - قسم المميزات
+             FEATURES SECTION - المميزات
         ====================================================================== -->
         <section class="mb-12 md:mb-20 reveal">
             <div class="text-center">
@@ -566,27 +476,27 @@
                     <h3 class="font-bold text-sm md:text-base mb-1">شهادات معتمدة</h3>
                     <p class="text-slate-500 text-xs md:text-sm">معتمدة من المؤسسة العامة للتدريب التقني والمهني</p>
                 </div>
-                <div class="feature-card" style="animation-delay:0.05s;">
+                <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-hands-helping" aria-hidden="true"></i></div>
                     <h3 class="font-bold text-sm md:text-base mb-1">تدريب عملي</h3>
                     <p class="text-slate-500 text-xs md:text-sm">تطبيق عملي مكثف يؤهلك فعلياً لسوق العمل</p>
                 </div>
-                <div class="feature-card" style="animation-delay:0.1s;">
+                <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></div>
                     <h3 class="font-bold text-sm md:text-base mb-1">مدربون متخصصون</h3>
                     <p class="text-slate-500 text-xs md:text-sm">نخبة من المدربين ذوي الخبرة الميدانية</p>
                 </div>
-                <div class="feature-card" style="animation-delay:0.15s;">
+                <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-venus-mars" aria-hidden="true"></i></div>
                     <h3 class="font-bold text-sm md:text-base mb-1">التسجيل للرجال والنساء</h3>
                     <p class="text-slate-500 text-xs md:text-sm">جميع البرامج متاحة لكافة المتدربين والمتدربات</p>
                 </div>
-                <div class="feature-card" style="animation-delay:0.2s;">
+                <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-credit-card" aria-hidden="true"></i></div>
                     <h3 class="font-bold text-sm md:text-base mb-1">أقساط ميسرة</h3>
                     <p class="text-slate-500 text-xs md:text-sm">خطط سداد مرنة تناسب جميع الميزانيات</p>
                 </div>
-                <div class="feature-card" style="animation-delay:0.25s;">
+                <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
                     <h3 class="font-bold text-sm md:text-base mb-1">فرص وظيفية</h3>
                     <p class="text-slate-500 text-xs md:text-sm">تأهيل عملي يفتح لك أبواب سوق العمل</p>
@@ -595,7 +505,7 @@
         </section>
 
         <!-- ======================================================================
-             VIDEO SECTION - فيديو تعريفي (تم استعادته)
+             VIDEO SECTION - فيديو تعريفي
         ====================================================================== -->
         <section class="bg-white rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-12 shadow-xl mb-12 md:mb-16 border border-slate-100 reveal">
             <h2 class="section-title">فيديو تعريفي عن المعهد</h2>
@@ -606,7 +516,7 @@
         </section>
 
         <!-- ======================================================================
-             SLIDESHOW SECTION - معرض الصور (تم استعادة جميع الصور)
+             SLIDESHOW SECTION - معرض الصور
         ====================================================================== -->
         <section class="bg-white rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-12 shadow-xl mb-12 md:mb-16 border border-slate-100 reveal">
             <h2 class="section-title">معرض الصور</h2>
@@ -620,7 +530,7 @@
         </section>
 
         <!-- ======================================================================
-             DIPLOMAS SECTION - الدبلومات (مرتبة حسب المطلوب)
+             DIPLOMAS SECTION - الدبلومات
         ====================================================================== -->
         <section id="diplomas" class="mb-12 md:mb-20 scroll-mt-6">
             <div class="text-center">
@@ -634,11 +544,11 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
 
-                <!-- دبلوم 1 - دبلوم التمريض (جديد) -->
-                <div class="diploma-card is-featured diploma-nursing1 relative bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
+                <!-- دبلوم 1 - التمريض (جديد) -->
+                <div class="diploma-card is-featured bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
                     <span class="ribbon"><i class="fas fa-star" aria-hidden="true"></i> جديد</span>
-                    <div class="diploma-header">
-                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=400&auto=format&fit=crop" alt="دبلوم التمريض" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e3a8a/white?text=دبلوم+التمريض';">
+                    <div class="diploma-header" style="background: linear-gradient(135deg, #1e3a8a, #2563eb);">
+                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=400&auto=format&fit=crop" alt="دبلوم التمريض" onerror="this.src='https://placehold.co/400x300/1e3a8a/white?text=دبلوم+التمريض';">
                         <div class="overlay"></div>
                         <h3>دبلوم التمريض</h3>
                     </div>
@@ -649,15 +559,15 @@
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-user-nurse text-blue-700 w-5 md:w-6" aria-hidden="true"></i><span>تدريب عملي مكثف</span></li>
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-circle-check text-blue-700 w-5 md:w-6" aria-hidden="true"></i><span>التسجيل متاح الآن</span></li>
                         </ul>
-                        <button onclick="openModal('دبلوم التمريض')" class="w-full btn-primary">سجل الآن</button>
+                        <button onclick="openModal('دبلوم التمريض')" class="btn-primary">سجل الآن</button>
                     </div>
                 </div>
 
-                <!-- دبلوم 2 - دبلوم إدارة التمريض (جديد - أحدث دبلوم) -->
-                <div class="diploma-card is-featured diploma-nursing2 relative bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.05s;">
+                <!-- دبلوم 2 - إدارة التمريض (جديد - أحدث دبلوم) -->
+                <div class="diploma-card is-featured bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
                     <span class="ribbon"><i class="fas fa-bolt" aria-hidden="true"></i> أحدث دبلوم</span>
-                    <div class="diploma-header">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=400&auto=format&fit=crop" alt="دبلوم إدارة التمريض" onerror="this.onerror=null; this.src='https://placehold.co/400x300/0e7490/white?text=إدارة+التمريض';">
+                    <div class="diploma-header" style="background: linear-gradient(135deg, #0e7490, #06b6d4);">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=400&auto=format&fit=crop" alt="دبلوم إدارة التمريض" onerror="this.src='https://placehold.co/400x300/0e7490/white?text=إدارة+التمريض';">
                         <div class="overlay"></div>
                         <h3>دبلوم إدارة التمريض</h3>
                     </div>
@@ -673,13 +583,13 @@
                             <div class="text-slate-400 text-[0.7rem] mb-1">السعر الحالي</div>
                             <div class="text-2xl md:text-3xl font-black text-accent">12,000 ر.س</div>
                         </div>
-                        <button onclick="openModal('دبلوم إدارة التمريض')" class="w-full btn-primary">سجل الآن</button>
+                        <button onclick="openModal('دبلوم إدارة التمريض')" class="btn-primary">سجل الآن</button>
                     </div>
                 </div>
 
                 <!-- دبلوم 3 - إدارة المستشفيات -->
-                <div class="diploma-card diploma-green bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.1s;">
-                    <div class="diploma-header">
+                <div class="diploma-card bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
+                    <div class="diploma-header" style="background: linear-gradient(135deg, #0f5c3e, #0a7e54);">
                         <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=400&auto=format&fit=crop" alt="Hospital">
                         <div class="overlay"></div>
                         <h3>دبلوم إدارة المستشفيات والخدمات الصحية</h3>
@@ -690,14 +600,17 @@
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-green-600 w-5 md:w-6" aria-hidden="true"></i><span>شهادة معتمدة دولياً ومحلياً</span></li>
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-tag text-green-600 w-5 md:w-6" aria-hidden="true"></i><span>خصم مميز للسداد النقدي</span></li>
                         </ul>
-                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">24,000 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div></div>
-                        <button onclick="openModal('دبلوم إدارة المستشفيات والخدمات الصحية')" class="w-full btn-primary">سجل الآن</button>
+                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6">
+                            <div class="text-slate-400 line-through text-xs md:text-sm mb-1">24,000 ر.س</div>
+                            <div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div>
+                        </div>
+                        <button onclick="openModal('دبلوم إدارة المستشفيات والخدمات الصحية')" class="btn-primary">سجل الآن</button>
                     </div>
                 </div>
 
                 <!-- دبلوم 4 - الخدمات اللوجستية -->
-                <div class="diploma-card diploma-orange bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.15s;">
-                    <div class="diploma-header">
+                <div class="diploma-card bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
+                    <div class="diploma-header" style="background: linear-gradient(135deg, #c2410c, #ea580c);">
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=400&auto=format&fit=crop" alt="Logistics">
                         <div class="overlay"></div>
                         <h3>دبلوم إدارة الخدمات اللوجستية</h3>
@@ -708,15 +621,18 @@
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-orange-600 w-5 md:w-6" aria-hidden="true"></i><span>شهادة معتمدة</span></li>
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-credit-card text-orange-600 w-5 md:w-6" aria-hidden="true"></i><span>قسط شهري 500 ريال فقط</span></li>
                         </ul>
-                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">25,000 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div></div>
-                        <button onclick="openModal('دبلوم إدارة الخدمات اللوجستية')" class="w-full btn-primary">سجل الآن</button>
+                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6">
+                            <div class="text-slate-400 line-through text-xs md:text-sm mb-1">25,000 ر.س</div>
+                            <div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div>
+                        </div>
+                        <button onclick="openModal('دبلوم إدارة الخدمات اللوجستية')" class="btn-primary">سجل الآن</button>
                     </div>
                 </div>
 
-                <!-- دبلوم 5 - علوم الحاسب الآلي التطبيقي (غير متاح - مع إزالة زر التسجيل) -->
-                <div class="diploma-card is-disabled diploma-purple bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.2s;">
+                <!-- دبلوم 5 - علوم الحاسب الآلي التطبيقي (غير متاح) -->
+                <div class="diploma-card is-disabled bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
                     <span class="ribbon ribbon-muted"><i class="fas fa-clock" aria-hidden="true"></i> سيفتح قريباً</span>
-                    <div class="diploma-header">
+                    <div class="diploma-header" style="background: linear-gradient(135deg, #64748b, #94a3b8); filter:grayscale(0.35);">
                         <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop" alt="دبلوم علوم الحاسب الآلي التطبيقي">
                         <div class="overlay"></div>
                         <h3>دبلوم علوم الحاسب الآلي التطبيقي</h3>
@@ -733,8 +649,8 @@
                 </div>
 
                 <!-- دبلوم 6 - الموارد البشرية -->
-                <div class="diploma-card diploma-pink bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.25s;">
-                    <div class="diploma-header">
+                <div class="diploma-card bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
+                    <div class="diploma-header" style="background: linear-gradient(135deg, #be185d, #db2777);">
                         <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=400&auto=format&fit=crop" alt="HR">
                         <div class="overlay"></div>
                         <h3>دبلوم إدارة الموارد البشرية</h3>
@@ -745,14 +661,17 @@
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-pink-600 w-5 md:w-6" aria-hidden="true"></i><span>شهادة معتمدة</span></li>
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-users text-pink-600 w-5 md:w-6" aria-hidden="true"></i><span>تأهيل للمناصب القيادية</span></li>
                         </ul>
-                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">10,200 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">5,000 ر.س</div></div>
-                        <button onclick="openModal('دبلوم إدارة الموارد البشرية')" class="w-full btn-primary">سجل الآن</button>
+                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6">
+                            <div class="text-slate-400 line-through text-xs md:text-sm mb-1">10,200 ر.س</div>
+                            <div class="text-2xl md:text-3xl font-black text-accent">5,000 ر.س</div>
+                        </div>
+                        <button onclick="openModal('دبلوم إدارة الموارد البشرية')" class="btn-primary">سجل الآن</button>
                     </div>
                 </div>
 
                 <!-- دبلوم 7 - الإدارة المكتبية -->
-                <div class="diploma-card diploma-teal bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.3s;">
-                    <div class="diploma-header">
+                <div class="diploma-card bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
+                    <div class="diploma-header" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=400&auto=format&fit=crop" alt="Office">
                         <div class="overlay"></div>
                         <h3>دبلوم الإدارة المكتبية</h3>
@@ -763,14 +682,17 @@
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-teal-600 w-5 md:w-6" aria-hidden="true"></i><span>شهادة معتمدة</span></li>
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-briefcase text-teal-600 w-5 md:w-6" aria-hidden="true"></i><span>مهارات إدارية متكاملة</span></li>
                         </ul>
-                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">10,100 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">5,000 ر.س</div></div>
-                        <button onclick="openModal('دبلوم الإدارة المكتبية')" class="w-full btn-primary">سجل الآن</button>
+                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6">
+                            <div class="text-slate-400 line-through text-xs md:text-sm mb-1">10,100 ر.س</div>
+                            <div class="text-2xl md:text-3xl font-black text-accent">5,000 ر.س</div>
+                        </div>
+                        <button onclick="openModal('دبلوم الإدارة المكتبية')" class="btn-primary">سجل الآن</button>
                     </div>
                 </div>
 
                 <!-- دبلوم 8 - الأمن السيبراني -->
-                <div class="diploma-card diploma-red bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group" style="animation-delay:0.35s;">
-                    <div class="diploma-header">
+                <div class="diploma-card bg-white rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 group">
+                    <div class="diploma-header" style="background: linear-gradient(135deg, #b91c1c, #dc2626);">
                         <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&auto=format&fit=crop" alt="Cyber">
                         <div class="overlay"></div>
                         <h3>دبلوم الأمن السيبراني</h3>
@@ -781,8 +703,11 @@
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-certificate text-red-600 w-5 md:w-6" aria-hidden="true"></i><span>شهادة معتمدة</span></li>
                             <li class="flex items-center gap-2 md:gap-3"><i class="fas fa-shield-alt text-red-600 w-5 md:w-6" aria-hidden="true"></i><span>تخصص المستقبل الواعد</span></li>
                         </ul>
-                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6"><div class="text-slate-400 line-through text-xs md:text-sm mb-1">25,000 ر.س</div><div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div></div>
-                        <button onclick="openModal('دبلوم الأمن السيبراني')" class="w-full btn-primary">سجل الآن</button>
+                        <div class="bg-orange-50 rounded-xl md:rounded-2xl p-3 md:p-4 text-center mb-5 md:mb-6">
+                            <div class="text-slate-400 line-through text-xs md:text-sm mb-1">25,000 ر.س</div>
+                            <div class="text-2xl md:text-3xl font-black text-accent">7,000 ر.س</div>
+                        </div>
+                        <button onclick="openModal('دبلوم الأمن السيبراني')" class="btn-primary">سجل الآن</button>
                     </div>
                 </div>
 
@@ -790,7 +715,7 @@
         </section>
 
         <!-- ======================================================================
-             WHY CHOOSE US SECTION - لماذا تختار المعهد الأهلي العالي للتدريب؟
+             WHY CHOOSE US SECTION - لماذا تختار المعهد
         ====================================================================== -->
         <section class="bg-primary text-white rounded-[2rem] md:rounded-[3rem] p-5 md:p-16 mb-12 md:mb-20 relative overflow-hidden reveal">
             <div class="absolute top-0 left-0 w-48 h-48 md:w-72 md:h-72 bg-accent/10 rounded-full blur-3xl"></div>
@@ -809,21 +734,21 @@
                             <p class="text-slate-300 text-sm">شهادات معتمدة من المؤسسة العامة للتدريب التقني والمهني</p>
                         </div>
                     </div>
-                    <div class="why-card" style="animation-delay:0.05s;">
+                    <div class="why-card">
                         <div class="why-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
                         <div>
                             <h3 class="font-bold mb-1">تأهيل حقيقي لسوق العمل</h3>
                             <p class="text-slate-300 text-sm">برامج مصممة بما يتوافق مع احتياجات جهات التوظيف</p>
                         </div>
                     </div>
-                    <div class="why-card" style="animation-delay:0.1s;">
+                    <div class="why-card">
                         <div class="why-icon"><i class="fas fa-hand-holding-dollar" aria-hidden="true"></i></div>
                         <div>
                             <h3 class="font-bold mb-1">أقساط وخصومات مميزة</h3>
                             <p class="text-slate-300 text-sm">خيارات سداد مرنة تناسب الجميع</p>
                         </div>
                     </div>
-                    <div class="why-card" style="animation-delay:0.15s;">
+                    <div class="why-card">
                         <div class="why-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
                         <div>
                             <h3 class="font-bold mb-1">دعم مستمر للمتدربين</h3>
@@ -835,23 +760,23 @@
         </section>
 
         <!-- ======================================================================
-             STATS SECTION - عداد الإنجازات
+             STATS SECTION - الإحصائيات
         ====================================================================== -->
         <section class="bg-white rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-14 shadow-xl mb-12 md:mb-20 border border-slate-100 reveal" id="statsSection">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
-                <div class="stat-box">
+                <div>
                     <div class="stat-number" data-target="9" data-suffix="+">0</div>
                     <p class="text-slate-500 text-xs md:text-base font-semibold mt-1 md:mt-2">برامج تدريبية</p>
                 </div>
-                <div class="stat-box">
+                <div>
                     <div class="stat-number" data-target="1500" data-suffix="+">0</div>
                     <p class="text-slate-500 text-xs md:text-base font-semibold mt-1 md:mt-2">عدد الخريجين</p>
                 </div>
-                <div class="stat-box">
+                <div>
                     <div class="stat-number" data-target="10" data-suffix="+">0</div>
                     <p class="text-slate-500 text-xs md:text-base font-semibold mt-1 md:mt-2">سنوات خبرة</p>
                 </div>
-                <div class="stat-box">
+                <div>
                     <div class="stat-number" data-target="98" data-suffix="%">0</div>
                     <p class="text-slate-500 text-xs md:text-base font-semibold mt-1 md:mt-2">رضا المتدربين</p>
                 </div>
@@ -859,32 +784,7 @@
         </section>
 
         <!-- ======================================================================
-             COURSES SECTION - الدورات التأهيلية
-        ====================================================================== -->
-        <section class="bg-slate-900 text-white rounded-[2rem] md:rounded-[3rem] p-5 md:p-16 mb-12 md:mb-20 relative overflow-hidden reveal">
-            <div class="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 bg-accent/10 rounded-full blur-3xl"></div>
-            <div class="relative z-10">
-                <h2 class="text-2xl md:text-4xl font-black text-center mb-3 md:mb-4">الدورات التأهيلية</h2>
-                <p class="text-center text-slate-400 mb-8 md:mb-12 text-sm md:text-base">دورات قصيرة مكثفة لتطوير مهاراتك الأساسية</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-5 md:p-8 rounded-2xl md:rounded-3xl text-center hover:bg-white/10 transition-all">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-accent/20 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6"><i class="fas fa-language text-accent text-xl md:text-2xl" aria-hidden="true"></i></div>
-                        <h3 class="text-lg md:text-xl font-bold mb-2">تأسيس اللغة الإنجليزية</h3><div class="text-2xl md:text-3xl font-black text-accent mb-3 md:mb-4">500 ر.س</div><p class="text-slate-400 text-xs md:text-sm">دورة متخصصة في الأساسيات - 3 شهور</p>
-                    </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-5 md:p-8 rounded-2xl md:rounded-3xl text-center hover:bg-white/10 transition-all">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-accent/20 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6"><i class="fas fa-desktop text-accent text-xl md:text-2xl" aria-hidden="true"></i></div>
-                        <h3 class="text-lg md:text-xl font-bold mb-2">استخدام الحاسوب</h3><div class="text-2xl md:text-3xl font-black text-accent mb-3 md:mb-4">800 ر.س</div><p class="text-slate-400 text-xs md:text-sm">دورة استخدام الحاسب في الأعمال المكتبية</p>
-                    </div>
-                    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-5 md:p-8 rounded-2xl md:rounded-3xl text-center hover:bg-white/10 transition-all">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-accent/20 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6"><i class="fas fa-graduation-cap text-accent text-xl md:text-2xl" aria-hidden="true"></i></div>
-                        <h3 class="text-lg md:text-xl font-bold mb-2">اللغة الإنجليزية (متوسط)</h3><div class="text-2xl md:text-3xl font-black text-accent mb-3 md:mb-4">500 ر.س</div><p class="text-slate-400 text-xs md:text-sm">تطوير مهارات المحادثة والكتابة</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======================================================================
-             CTA BANNER - شريط دعوة لاتخاذ إجراء قبل الفوتر
+             CTA BANNER - شريط الدعوة
         ====================================================================== -->
         <section class="cta-banner text-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 mb-12 md:mb-20 text-center reveal">
             <div class="relative z-10">
@@ -895,18 +795,19 @@
                 </a>
             </div>
         </section>
+
     </main>
 
     <!-- ======================================================================
-         FOOTER - (بدون أي تغيير في اسم المعهد، العنوان، رقم الجوال، أو رابط الواتساب)
+         FOOTER
     ====================================================================== -->
     <footer class="bg-primary text-white pt-12 md:pt-20 pb-6 md:pb-10 rounded-t-[2rem] md:rounded-t-[3rem]">
         <div class="container mx-auto px-4 md:px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-10 md:mb-16">
                 <div class="text-center md:text-right">
                     <div class="flex justify-center md:justify-start gap-3 md:gap-4 mb-4 md:mb-6">
-                        <img src="my-images/log1.png" class="h-10 md:h-16 brightness-0 invert" alt="شعار المعهد" onerror="this.src='https://placehold.co/80x40?text=Logo'">
-                        <img src="my-images/logo.png" class="h-10 md:h-16 brightness-0 invert" alt="شعار المؤسسة" onerror="this.src='https://placehold.co/80x40?text=TVTC'">
+                        <img src="my-images/log1.png" class="h-10 md:h-16 brightness-0 invert" alt="شعار المعهد">
+                        <img src="my-images/logo.png" class="h-10 md:h-16 brightness-0 invert" alt="شعار المؤسسة">
                     </div>
                     <h3 class="text-xl md:text-2xl font-black mb-3 md:mb-4">المعهد الأهلي العالي للتدريب</h3>
                     <p class="text-slate-300 text-sm md:text-base">محافظة القريات - المملكة العربية السعودية</p>
@@ -929,7 +830,7 @@
                 </div>
             </div>
             <div class="border-t border-white/10 pt-6 md:pt-8 text-center text-slate-400 text-xs md:text-sm">
-                <p>© Yousif E. Hashim 2025 جميع الحقوق محفوظة</p>
+                <p>© جميع الحقوق محفوظة - المعهد الأهلي العالي للتدريب 2025</p>
             </div>
         </div>
     </footer>
@@ -938,7 +839,7 @@
          MODAL - نافذة التسجيل
     ====================================================================== -->
     <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-3 md:p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-        <div class="bg-white rounded-[1.5rem] md:rounded-[2.5rem] w-full max-w-lg overflow-hidden shadow-2xl animate-in">
+        <div class="bg-white rounded-[1.5rem] md:rounded-[2.5rem] w-full max-w-lg overflow-hidden shadow-2xl">
             <div class="bg-gradient-to-r from-primary to-secondary p-5 md:p-8 text-white text-center relative" style="background: linear-gradient(135deg, #0b2b44, #1e3c72);">
                 <button onclick="closeModal()" aria-label="إغلاق نافذة التسجيل" class="absolute top-2 left-2 md:top-4 md:left-4 text-white/80 hover:text-white text-xl md:text-2xl"><i class="fas fa-times" aria-hidden="true"></i></button>
                 <h3 id="modalTitle" class="text-xl md:text-2xl font-black">التسجيل في الدبلوم</h3>
@@ -955,7 +856,7 @@
     </div>
 
     <!-- ======================================================================
-         STICKY MOBILE CTA - زر تسجيل ثابت أثناء التصفح في الجوال
+         STICKY MOBILE CTA
     ====================================================================== -->
     <div class="sticky-cta" role="complementary" aria-label="تسجيل سريع">
         <span class="cta-text">دبلومات معتمدة<br>للرجال والنساء</span>
@@ -963,7 +864,7 @@
     </div>
 
     <script>
-        // ---------- SLIDESHOW (جميع صور المعرض) ----------
+        // ========== SLIDESHOW ==========
         const images = [
             "my-images/photo1.jpg", "my-images/photo2.jpg", "my-images/photo3.jpg", "my-images/photo4.jpg", "my-images/photo5.jpg",
             "my-images/photo6.jpg", "my-images/photo7.jpg", "my-images/photo8.jpg", "my-images/photo9.jpg", "my-images/photo10.jpg",
@@ -980,7 +881,7 @@
             slideElements = [];
             images.forEach((src, idx) => {
                 const slideDiv = document.createElement('div');
-                slideDiv.className = 'slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out';
+                slideDiv.className = 'slide absolute inset-0 opacity-0';
                 const img = document.createElement('img');
                 img.src = src;
                 img.alt = `صورة المعهد ${idx+1}`;
@@ -1024,7 +925,7 @@
         function goToSlide(index) { currentSlide = index; updateSlideshow(); resetAutoSlide(); }
         function resetAutoSlide() { if(slideshowInterval) clearInterval(slideshowInterval); slideshowInterval = setInterval(() => nextSlide(), 5000); }
 
-        // ---------- MODAL FUNCTIONS ----------
+        // ========== MODAL ==========
         function openModal(diplomaName) {
             const modal = document.getElementById('contactModal');
             const diplomaSpan = document.getElementById('diplomaName');
@@ -1048,7 +949,7 @@
             });
         }
 
-        // ---------- COUNTER ANIMATION ----------
+        // ========== COUNTER ==========
         function animateCounter(el) {
             const target = parseInt(el.dataset.target, 10) || 0;
             const suffix = el.dataset.suffix || '';
@@ -1064,7 +965,7 @@
             requestAnimationFrame(step);
         }
 
-        // ---------- REVEAL ON SCROLL ----------
+        // ========== REVEAL ON SCROLL ==========
         function setupRevealObserver() {
             const revealEls = document.querySelectorAll('.reveal');
             const statNumbers = document.querySelectorAll('.stat-number');
@@ -1100,5 +1001,6 @@
         window.closeModal = closeModal;
         window.copyNumber = copyNumber;
     </script>
+
 </body>
 </html>
